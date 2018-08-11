@@ -12,7 +12,7 @@ struct IngredientData {
     let data = [
         ["Brown Rice", "Romaine Lettuce", "Sweet Potato", "Whole-wheat Pasta", "Baby Spinach", "Quinoa"],
         ["Chicken Breast", "Dory", "Tilapia", "Tofu", "Rib Eye Steak", "Salmon"],
-        ["Baby corn", "Bell papers", "Broccoli", "Butter Bean", "Button Mushrooms", "Carrots", "Cherry Tomatoes", "Couscous", "Egg Whithes", "Kimchi", "Onsen Egg", "Pumpkin", "Spicy Edamame", "Sweet Corn", "Wakame", "Zucchini", "Avocado"],
+        ["Baby Corn", "Bell Papers", "Broccoli", "Butter Bean", "Button Mushrooms", "Carrots", "Cherry Tomatoes", "Couscous", "Egg Whites", "Kimchi", "Onsen Egg", "Pumpkin", "Spicy Edamame", "Sweet Corn", "Wakame", "Zucchini", "Avocado"],
         ["Almonds", "Furikake", "Garlic", "Mixed Seeds", "Raisins", "Tortilla"],
         ["Barbeque", "Green Curry", "Mint Yogurt", "Miso Mustard", "Pesto Vinaigrette", "Romesco", "Sesame Peanut", "Thai"]
     ]
