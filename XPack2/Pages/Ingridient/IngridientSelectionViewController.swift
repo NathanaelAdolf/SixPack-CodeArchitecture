@@ -11,11 +11,14 @@ import UIKit
 class IngridientSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, IngridientCellProtocol {
     
     @IBOutlet weak var ingridientTableView: UITableView!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     var ingredients: [String] = []
     var ingredientType: IngredientType = .base
     var bowl: Bowl = Bowl()
     var selectedIngredients: [String:Double] = [:]
-    @IBOutlet weak var priceLabel: UILabel!
+    var isChargedForAdditionalServing = false
+    var additionalCharge = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +46,8 @@ class IngridientSelectionViewController: UIViewController, UITableViewDelegate, 
         ingridientTableView.dataSource = self
         
         updatePriceBarItem()
+        
+        (isChargedForAdditionalServing, additionalCharge) = bowl.isChargedForAdditionalServing(type: ingredientType)
     }
     
     func updatePriceBarItem(){
@@ -94,6 +99,12 @@ extension IngridientSelectionViewController {
             cell.ingridientStepper.value = 0.0
             cell.ingridientQuantityLabel.text = "0"
         }
+        
+        if isChargedForAdditionalServing {
+            cell.priceLabel.text = "+\(additionalCharge)K IDR"
+        } else {
+            cell.priceLabel.text = "+0K IDR"
+        }
         return cell
     }
 }
@@ -107,6 +118,13 @@ extension IngridientSelectionViewController {
         selectedIngredients[ingridientName] = stepper.value
         bowl.ingredients[ingredientType] = selectedIngredients
         updatePriceBarItem()
+        
+        let (isCharged, chargeAmount) = bowl.isChargedForAdditionalServing(type: ingredientType)
+        if isCharged != isChargedForAdditionalServing {
+            isChargedForAdditionalServing = isCharged
+            additionalCharge = chargeAmount
+            ingridientTableView.reloadData()
+        }
         
         print(ingridientName ,stepper.value)
         return getDisplayedQuantityValueFromStepper(stepperValue: stepper.value)

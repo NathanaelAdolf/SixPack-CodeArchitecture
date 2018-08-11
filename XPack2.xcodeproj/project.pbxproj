@@ -12,12 +12,18 @@
 		F407420B2117E23C00F6CD12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40742092117E23C00F6CD12 /* Main.storyboard */; };
 		F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F407420C2117E23D00F6CD12 /* Assets.xcassets */; };
 		F40742102117E23D00F6CD12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F407420E2117E23D00F6CD12 /* LaunchScreen.storyboard */; };
+		F432E628211E712A00C6C663 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432E627211E712A00C6C663 /* ColorHelper.swift */; };
+		F432E62B211E763C00C6C663 /* PaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432E62A211E763C00C6C663 /* PaymentMethodViewController.swift */; };
+		F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */; };
+		F432E631211E81E100C6C663 /* PaymentMethod.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F432E62F211E81E100C6C663 /* PaymentMethod.storyboard */; };
+		F432E633211E81F300C6C663 /* PaymentDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F432E632211E81F300C6C663 /* PaymentDetail.storyboard */; };
 		F4BC77FB2119306200F1C758 /* XPack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4BC77F92119306200F1C758 /* XPack.xcdatamodeld */; };
 		F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */; };
 		F4BC7801211936B600F1C758 /* EnumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC7800211936B600F1C758 /* EnumHelper.swift */; };
 		F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */; };
 		F4BC78062119499B00F1C758 /* Bowl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78052119499B00F1C758 /* Bowl.swift */; };
 		F4D1BA2F211D3CE500AC1372 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1BA2E211D3CE500AC1372 /* Ingredient.swift */; };
+		F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */; };
 		F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AC84211D818A00374657 /* CheckoutViewController.swift */; };
 		F4F2AC87211D852900374657 /* CheckoutItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AC86211D852900374657 /* CheckoutItemTableViewCell.swift */; };
 		F4F2FB59211BE45B003898E6 /* CheckoutPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2FB57211BE45B003898E6 /* CheckoutPage.storyboard */; };
@@ -37,12 +43,18 @@
 		F407420C2117E23D00F6CD12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F407420F2117E23D00F6CD12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F40742112117E23D00F6CD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F432E627211E712A00C6C663 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		F432E62A211E763C00C6C663 /* PaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewController.swift; sourceTree = "<group>"; };
+		F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
+		F432E630211E81E100C6C663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/Pages/checkout/XPack2/Pages/Bowl/XPack2/View/Base.lproj/PaymentMethod.storyboard; sourceTree = "<group>"; };
+		F432E632211E81F300C6C663 /* PaymentDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentDetail.storyboard; sourceTree = "<group>"; };
 		F4BC77FA2119306200F1C758 /* XPack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XPack.xcdatamodel; sourceTree = "<group>"; };
 		F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientSelectionViewController.swift; sourceTree = "<group>"; };
 		F4BC7800211936B600F1C758 /* EnumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHelper.swift; sourceTree = "<group>"; };
 		F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
 		F4BC78052119499B00F1C758 /* Bowl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowl.swift; sourceTree = "<group>"; };
 		F4D1BA2E211D3CE500AC1372 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberHelper.swift; sourceTree = "<group>"; };
 		F4F2AC84211D818A00374657 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		F4F2AC86211D852900374657 /* CheckoutItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemTableViewCell.swift; sourceTree = "<group>"; };
 		F4F2FB58211BE45B003898E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/Pages/Bowl/XPack2/View/Base.lproj/CheckoutPage.storyboard; sourceTree = "<group>"; };
@@ -85,9 +97,11 @@
 		F40742042117E23C00F6CD12 /* XPack2 */ = {
 			isa = PBXGroup;
 			children = (
+				F468E290211E863000C859DC /* fonts */,
 				F40742052117E23C00F6CD12 /* AppDelegate.swift */,
 				F4FE7974211A99920068674F /* Pages */,
 				F4BC78042119497600F1C758 /* Model */,
+				F4DA8AA4211EA7CF00D02626 /* Helper */,
 				F4BC78072119698A00F1C758 /* View */,
 				F407420C2117E23D00F6CD12 /* Assets.xcassets */,
 				F40742112117E23D00F6CD12 /* Info.plist */,
@@ -95,10 +109,34 @@
 			path = XPack2;
 			sourceTree = "<group>";
 		};
+		F432E629211E761E00C6C663 /* payment */ = {
+			isa = PBXGroup;
+			children = (
+				F432E62F211E81E100C6C663 /* PaymentMethod.storyboard */,
+				F432E62A211E763C00C6C663 /* PaymentMethodViewController.swift */,
+			);
+			path = payment;
+			sourceTree = "<group>";
+		};
+		F432E62C211E7AAC00C6C663 /* payment detail */ = {
+			isa = PBXGroup;
+			children = (
+				F432E632211E81F300C6C663 /* PaymentDetail.storyboard */,
+				F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */,
+			);
+			path = "payment detail";
+			sourceTree = "<group>";
+		};
+		F468E290211E863000C859DC /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		F4BC78042119497600F1C758 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F4BC7800211936B600F1C758 /* EnumHelper.swift */,
 				F4F2FB5A211BE4B5003898E6 /* Customer.swift */,
 				F4BC78052119499B00F1C758 /* Bowl.swift */,
 				F4D1BA2E211D3CE500AC1372 /* Ingredient.swift */,
@@ -114,6 +152,16 @@
 				F407420E2117E23D00F6CD12 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4DA8AA4211EA7CF00D02626 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F4BC7800211936B600F1C758 /* EnumHelper.swift */,
+				F432E627211E712A00C6C663 /* ColorHelper.swift */,
+				F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		F4F2FB5C211BEC2B003898E6 /* checkout */ = {
@@ -157,6 +205,8 @@
 		F4FE7974211A99920068674F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				F432E62C211E7AAC00C6C663 /* payment detail */,
+				F432E629211E761E00C6C663 /* payment */,
 				F4F2FB5C211BEC2B003898E6 /* checkout */,
 				F4FE7972211A98FD0068674F /* Ingridient */,
 				F4FE7971211A98D30068674F /* Bowl */,
@@ -223,8 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F432E633211E81F300C6C663 /* PaymentDetail.storyboard in Resources */,
 				F40742102117E23D00F6CD12 /* LaunchScreen.storyboard in Resources */,
 				F4F2FB59211BE45B003898E6 /* CheckoutPage.storyboard in Resources */,
+				F432E631211E81E100C6C663 /* PaymentMethod.storyboard in Resources */,
 				F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */,
 				F4F4303C2119B80000B2B859 /* ChooseMenu.storyboard in Resources */,
 				F4FE7970211A8D8B0068674F /* IngridientChoice.storyboard in Resources */,
@@ -240,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */,
+				F432E628211E712A00C6C663 /* ColorHelper.swift in Sources */,
+				F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */,
 				F4F2AC87211D852900374657 /* CheckoutItemTableViewCell.swift in Sources */,
 				F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */,
 				F4BC78062119499B00F1C758 /* Bowl.swift in Sources */,
@@ -252,6 +306,8 @@
 				F4D1BA2F211D3CE500AC1372 /* Ingredient.swift in Sources */,
 				F4FE796E211A84F60068674F /* BowlDetailTableViewCell.swift in Sources */,
 				F4F430372119960200B2B859 /* IngredientData.swift in Sources */,
+				F432E62B211E763C00C6C663 /* PaymentMethodViewController.swift in Sources */,
+				F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */,
 				F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +329,14 @@
 				F407420F2117E23D00F6CD12 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F432E62F211E81E100C6C663 /* PaymentMethod.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F432E630211E81E100C6C663 /* Base */,
+			);
+			name = PaymentMethod.storyboard;
 			sourceTree = "<group>";
 		};
 		F4F2FB57211BE45B003898E6 /* CheckoutPage.storyboard */ = {

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pnn-8f-3L6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment Method View Controller-->
+        <scene sceneID="Nye-dS-cQo">
+            <objects>
+                <viewController id="Pnn-8f-3L6" customClass="PaymentMethodViewController" customModule="XPack2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fiW-ko-Wrr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V2S-Bh-rJK">
+                                <rect key="frame" x="30" y="70" width="315" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9a-eK-yqk">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harga" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQv-9W-YxB">
+                                        <rect key="frame" x="157.5" y="0.0" width="157.5" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="OnF-N9-eV2"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EmO-g0-xwq">
+                                <rect key="frame" x="20" y="115" width="335" height="432"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentMethodCell" textLabel="nDq-TZ-2ce" style="IBUITableViewCellStyleDefault" id="r5Q-cY-UFS">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r5Q-cY-UFS" id="CRl-wF-9X1">
+                                            <rect key="frame" x="0.0" y="0.0" width="302" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nDq-TZ-2ce">
+                                                    <rect key="frame" x="15" y="0.0" width="285" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vhN-tB-O61" firstAttribute="trailing" secondItem="V2S-Bh-rJK" secondAttribute="trailing" constant="30" id="8Tw-jG-MeD"/>
+                            <constraint firstItem="V2S-Bh-rJK" firstAttribute="top" secondItem="vhN-tB-O61" secondAttribute="top" constant="50" id="HNQ-BJ-FyM"/>
+                            <constraint firstItem="vhN-tB-O61" firstAttribute="trailing" secondItem="EmO-g0-xwq" secondAttribute="trailing" constant="20" id="YwB-wV-sTo"/>
+                            <constraint firstItem="V2S-Bh-rJK" firstAttribute="leading" secondItem="vhN-tB-O61" secondAttribute="leading" constant="30" id="bhm-dI-h5Z"/>
+                            <constraint firstItem="EmO-g0-xwq" firstAttribute="top" secondItem="V2S-Bh-rJK" secondAttribute="bottom" constant="20" id="s7s-u9-bct"/>
+                            <constraint firstItem="vhN-tB-O61" firstAttribute="bottom" secondItem="EmO-g0-xwq" secondAttribute="bottom" constant="120" id="zYc-3x-oUQ"/>
+                            <constraint firstItem="EmO-g0-xwq" firstAttribute="leading" secondItem="vhN-tB-O61" secondAttribute="leading" constant="20" id="ztQ-pa-Gdz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vhN-tB-O61"/>
+                    </view>
+                    <connections>
+                        <outlet property="paymentTableView" destination="EmO-g0-xwq" id="CON-yP-eKn"/>
+                        <outlet property="priceLabel" destination="DQv-9W-YxB" id="gtc-BU-abt"/>
+                        <segue destination="U6C-d9-1Wp" kind="show" identifier="PaymentDetailSegue" id="shp-Z0-cKM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7SG-N6-b6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3656.8000000000002" y="1415.4422788605698"/>
+        </scene>
+        <!--PaymentDetail-->
+        <scene sceneID="kOr-Wn-y2z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PaymentDetail" id="U6C-d9-1Wp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKS-aR-Rik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4529" y="1415"/>
+        </scene>
+    </scenes>
+</document>

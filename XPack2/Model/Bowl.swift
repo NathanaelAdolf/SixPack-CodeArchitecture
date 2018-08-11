@@ -109,7 +109,7 @@ struct Bowl {
             }
         }
         
-        if count - Int(ingredientBase[type]!) > 1 {
+        if count - Int(ingredientBase[type]!) >= 0 {
             if type == .base || type == .supplement {
                 return (true, 10)
             } else if type == .dressing || type == .topping {
@@ -131,6 +131,36 @@ struct Bowl {
         }
         
         return ("","")
+    }
+    
+    // Reduce or sum all value from particular type so that we get string to display
+    func reduceIngridientStringFor(type: IngredientType) -> String {
+        let ingridients = self.ingredients[type]!
+        var tempString = ""
+        var count = 0
+        for ingridient in ingridients {
+            count += 1
+            if ingridient.value > 0.0 {
+                if type == .protein {
+                    if ingridient.value == 1.0 {
+                        tempString.append("1/2 \(ingridient.key)")
+                    } else {
+                        tempString.append("\(Int(ingridient.value) - 1) \(ingridient.key)")
+                    }
+                } else {
+                    tempString.append("\(Int(ingridient.value)) \(ingridient.key)")
+                }
+                
+                if count < ingridients.count {
+                    tempString.append(", ")
+                }
+            }
+        }
+        
+        if tempString == "" {
+            tempString = "Please pick your best choice"
+        }
+        return tempString
     }
     
     // dapetin base buat bowl berdasarkan type bowlnya

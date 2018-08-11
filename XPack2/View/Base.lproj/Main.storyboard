@@ -18,16 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vw1-hy-zs0">
+                                <rect key="frame" x="30" y="319" width="315" height="29"/>
+                                <segments>
+                                    <segment title="Dine In"/>
+                                    <segment title="Take Away"/>
+                                </segments>
+                                <color key="tintColor" red="0.27843137254901962" green="0.37254901960784315" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lBC-tu-5Yu">
                                 <rect key="frame" x="30" y="214" width="315" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9k-yL-ECf">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9k-yL-ECf">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qG4-IV-d9O">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email (Optional)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qG4-IV-d9O">
                                         <rect key="frame" x="0.0" y="50" width="315" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
@@ -35,43 +43,11 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-BI-qWd">
-                                <rect key="frame" x="30" y="114" width="315" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Xnn-4h-Kzm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qTE-Jj-X8l">
-                                <rect key="frame" x="30" y="334" width="315" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-7Z-bZH">
-                                        <rect key="frame" x="112.5" y="0.0" width="90" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vw1-hy-zs0">
-                                        <rect key="frame" x="80" y="30.5" width="155" height="30.5"/>
-                                        <segments>
-                                            <segment title="Dine In"/>
-                                            <segment title="Take Away"/>
-                                        </segments>
-                                    </segmentedControl>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="bfH-Ia-ZEQ"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWJ-So-7U3">
-                                <rect key="frame" x="30" y="494" width="315" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="y0L-cm-gdw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Set"/>
+                                <rect key="frame" x="30" y="397" width="315" height="45"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                <color key="tintColor" red="0.2784313725" green="0.37254901959999998" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Let's Order"/>
                                 <connections>
                                     <action selector="goToBowlPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hM-Sh-oXN"/>
                                 </connections>
@@ -79,18 +55,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lDs-BI-qWd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1WD-OO-ahZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lDs-BI-qWd" secondAttribute="trailing" constant="30" id="F0H-ee-15B"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTE-Jj-X8l" secondAttribute="trailing" constant="30" id="HVp-N2-90O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CWJ-So-7U3" secondAttribute="trailing" constant="30" id="O8V-kv-cjk"/>
-                            <constraint firstItem="qTE-Jj-X8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QJn-7a-SsC"/>
+                            <constraint firstItem="vw1-hy-zs0" firstAttribute="centerX" secondItem="lBC-tu-5Yu" secondAttribute="centerX" id="23s-q8-yj9"/>
+                            <constraint firstItem="lBC-tu-5Yu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="3IN-cn-wKr"/>
+                            <constraint firstItem="CWJ-So-7U3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4ZZ-j8-TfH"/>
+                            <constraint firstItem="CWJ-So-7U3" firstAttribute="centerX" secondItem="vw1-hy-zs0" secondAttribute="centerX" id="4xL-y0-upf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vw1-hy-zs0" secondAttribute="trailing" constant="30" id="DJO-fy-7OS"/>
+                            <constraint firstItem="vw1-hy-zs0" firstAttribute="top" secondItem="lBC-tu-5Yu" secondAttribute="bottom" constant="25" id="FAY-Gy-5FD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lBC-tu-5Yu" secondAttribute="trailing" constant="30" id="RMM-AR-QtM"/>
-                            <constraint firstItem="lDs-BI-qWd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="abG-yD-od5"/>
-                            <constraint firstItem="lBC-tu-5Yu" firstAttribute="top" secondItem="lDs-BI-qWd" secondAttribute="bottom" constant="50" id="b82-bN-9Ob"/>
-                            <constraint firstItem="CWJ-So-7U3" firstAttribute="top" secondItem="qTE-Jj-X8l" secondAttribute="bottom" constant="100" id="h4j-Hc-Lhs"/>
+                            <constraint firstItem="vw1-hy-zs0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="geA-Bl-aAb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CWJ-So-7U3" secondAttribute="trailing" constant="30" id="jO4-iB-k8V"/>
+                            <constraint firstItem="CWJ-So-7U3" firstAttribute="top" secondItem="vw1-hy-zs0" secondAttribute="bottom" constant="50" id="jRp-JW-ezR"/>
                             <constraint firstItem="lBC-tu-5Yu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="onQ-9d-bQB"/>
-                            <constraint firstItem="qTE-Jj-X8l" firstAttribute="top" secondItem="lBC-tu-5Yu" secondAttribute="bottom" constant="40" id="rQk-Yy-DEE"/>
-                            <constraint firstItem="CWJ-So-7U3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="vPG-5a-zA1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -115,6 +90,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oqv-K0-aAA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -134,4 +112,5 @@
             <point key="canvasLocation" x="1990" y="131"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

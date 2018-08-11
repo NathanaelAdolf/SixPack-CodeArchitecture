@@ -31,7 +31,8 @@ class BowlViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barTintColor = UIColor.cyan
+        
+        navigationController?.navigationBar.barTintColor = ColorHelper().getMainOrange()
         navigationController?.navigationBar.layer.masksToBounds = false
         navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
         navigationController?.navigationBar.layer.shadowOpacity = 0.8
@@ -67,46 +68,6 @@ class BowlViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func goToCheckoutPage(_ sender: Any) {
         performSegue(withIdentifier: "GoToCheckoutPage", sender: nil)
     }
-    
-    
-    // Reduce or sum all value from particular type so that we get string to display
-    func reduceIngridientString(type: IngredientType, ingridients: [String:Double]) -> String {
-        var tempString = ""
-        var count = 0
-        for ingridient in ingridients {
-            count += 1
-            if ingridient.value > 0.0 {
-                if type == .protein {
-                    if ingridient.value == 1.0 {
-                        tempString.append("1/2 \(ingridient.key)")
-                    } else {
-                        tempString.append("\(Int(ingridient.value) - 1) \(ingridient.key)")
-                    }
-                } else {
-                    tempString.append("\(Int(ingridient.value)) \(ingridient.key)")
-                }
-                
-                if count < ingridients.count {
-                    tempString.append(", ")
-                }
-            }
-        }
-        
-        if tempString == "" {
-            tempString = "Please pick your best choice"
-        }
-        return tempString
-    }
-    
-    // Function to remove decimal di belakang kalo 0
-    func formatTruncateZeroPointDouble(number: Double) -> String {
-        if number.rounded(.down) == number {
-            return "\(Int(number))"
-        } else {
-            return "\(number)"
-        }
-    }
-    
 
     // Prepare segue for passing value to other view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,8 +75,10 @@ class BowlViewController: UIViewController, UITableViewDelegate, UITableViewData
             let ip = sender as! IndexPath
             dest.ingredientType = bowlIngredients[ip.row]
             dest.bowl = bowl
-            
-            navigationController?.title = "Hai"
+        }
+        
+        if let dest = segue.destination as? CheckoutViewController {
+            dest.bowl = bowl
         }
     }
 }
@@ -137,11 +100,11 @@ extension BowlViewController {
         cell.titleLabel.text = ingredientType.rawValue.capitalized
         
         // Check if kalo ada ingredient type then write the detail on subtitle
-        if let ingridients = bowl.ingredients[ingredientType] {
-            cell.subtitleLabel.text = reduceIngridientString(type: ingredientType, ingridients: ingridients)
+        if bowl.ingredients[ingredientType] != nil {
+            cell.subtitleLabel.text = bowl.reduceIngridientStringFor(type: ingredientType)
 
             let sumTotal = bowl.sumTotalIngredients(type: ingredientType)
-            cell.quantityLabel.text = formatTruncateZeroPointDouble(number: sumTotal)
+            cell.quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(number: sumTotal)
         }
         
         return cell

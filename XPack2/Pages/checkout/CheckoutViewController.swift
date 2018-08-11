@@ -14,6 +14,9 @@ class CheckoutViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var packageLabel: UILabel!
     var bowl = Bowl()
     var bowlIngredients: [IngredientType] = [.base, .protein, .supplement, .topping, .dressing]
+
+    @IBOutlet weak var bowlTypeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,43 +25,22 @@ class CheckoutViewController: UIViewController, UITableViewDelegate, UITableView
         
         recapTableView.estimatedRowHeight = 60
         recapTableView.rowHeight = UITableViewAutomaticDimension
-    }
-
-    // Reduce or sum all value from particular type so that we get string to display
-    func reduceIngridientString(type: IngredientType, ingridients: [String:Double]) -> String {
-        var tempString = ""
-        var count = 0
-        for ingridient in ingridients {
-            count += 1
-            if ingridient.value > 0.0 {
-                if type == .protein {
-                    if ingridient.value == 1.0 {
-                        tempString.append("1/2 \(ingridient.key)")
-                    } else {
-                        tempString.append("\(Int(ingridient.value) - 1) \(ingridient.key)")
-                    }
-                } else {
-                    tempString.append("\(Int(ingridient.value)) \(ingridient.key)")
-                }
-                
-                if count < ingridients.count {
-                    tempString.append(", ")
-                }
-            }
-        }
         
-        if tempString == "" {
-            tempString = "Please pick your best choice"
-        }
-        return tempString
+        priceLabel.text = "IDR \(bowl.price)K"
+        
+        let (bowlType, _) = bowl.getBowlTypeDetailInfo()
+        bowlTypeLabel.text = bowlType.uppercased()
+        
+        title = "Checkout"
     }
-
-    // Function to remove decimal di belakang kalo 0
-    func formatTruncateZeroPointDouble(number: Double) -> String {
-        if number.rounded(.down) == number {
-            return "\(Int(number))"
-        } else {
-            return "\(number)"
+    
+    @IBAction func goToPaymentMethodPage(_ sender: Any) {
+        performSegue(withIdentifier: "PaymentMethodSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? PaymentMethodViewController {
+            dest.bowl = bowl
         }
     }
 }
@@ -76,11 +58,11 @@ extension CheckoutViewController {
         let ingredientType = bowlIngredients[indexPath.row]
         
         // Check if kalo ada ingredient type then write the detail on subtitle
-        if let ingridients = bowl.ingredients[ingredientType] {
-            cell.checkoutItemDescriptionLabel.text = reduceIngridientString(type: ingredientType, ingridients: ingridients)
+        if bowl.ingredients[ingredientType] != nil {
+            cell.checkoutItemDescriptionLabel.text = bowl.reduceIngridientStringFor(type: ingredientType)
             
             let sumTotal = bowl.sumTotalIngredients(type: ingredientType)
-            cell.quantityLabel.text = formatTruncateZeroPointDouble(number: sumTotal)
+            cell.quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(number: sumTotal)
         }
         
         return cell

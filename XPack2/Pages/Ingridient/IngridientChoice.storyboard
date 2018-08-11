@@ -32,7 +32,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-k6-edt">
                                                     <rect key="frame" x="20" y="4" width="80" height="80"/>
-                                                    <color key="backgroundColor" red="0.83249399079999997" green="1" blue="0.7091385067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.97254901959999995" green="0.57254901960000004" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="U1V-YJ-a9G"/>
                                                         <constraint firstAttribute="height" constant="80" id="v1o-S9-RtH"/>
@@ -41,13 +41,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Harga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpf-PY-ZPM">
                                                     <rect key="frame" x="110" y="35" width="38" height="19.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nama baha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-gT-kJ8">
                                                     <rect key="frame" x="110" y="4" width="74.666666666666686" height="19.666666666666668"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6eb-UZ-IVG">
@@ -56,6 +56,7 @@
                                                         <constraint firstAttribute="width" constant="94" id="Z7K-tc-HIR"/>
                                                         <constraint firstAttribute="height" constant="29" id="lw4-TH-vNo"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.2784313725" green="0.37254901959999998" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <connections>
                                                         <action selector="onChangeStepperValue:" destination="p3f-Lb-O8f" eventType="valueChanged" id="aqc-kc-4jd"/>
                                                     </connections>
@@ -63,7 +64,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbt-kj-yu4">
                                                     <rect key="frame" x="232.66666666666666" y="35.666666666666664" width="23.333333333333343" height="19.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -85,6 +86,7 @@
                                             <outlet property="ingridientNameLabel" destination="W0F-gT-kJ8" id="a46-6Q-XAr"/>
                                             <outlet property="ingridientQuantityLabel" destination="kbt-kj-yu4" id="ytW-xj-p74"/>
                                             <outlet property="ingridientStepper" destination="6eb-UZ-IVG" id="JSA-HX-nhh"/>
+                                            <outlet property="priceLabel" destination="Lpf-PY-ZPM" id="sHW-Cc-R6g"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -95,17 +97,17 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LL-81-9NO">
                                         <rect key="frame" x="40" y="45.333333333333371" width="37.333333333333343" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKk-6c-iJJ">
                                         <rect key="frame" x="313.66666666666669" y="45.333333333333371" width="31.333333333333314" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.83249399079999997" green="1" blue="0.7091385067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.57254901960000004" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="4LL-81-9NO" firstAttribute="centerY" secondItem="9vW-GK-I84" secondAttribute="centerY" id="DsT-vX-5sk"/>

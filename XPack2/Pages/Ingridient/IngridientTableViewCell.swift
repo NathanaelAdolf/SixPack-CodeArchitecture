@@ -14,6 +14,7 @@ class IngridientTableViewCell: UITableViewCell {
     @IBOutlet weak var ingridientQuantityLabel: UILabel!
     @IBOutlet weak var ingridientNameLabel: UILabel!
     @IBOutlet weak var ingredientImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
     
     var cellProtocol: IngridientCellProtocol? = nil
     
