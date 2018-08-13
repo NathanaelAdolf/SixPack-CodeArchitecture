@@ -32,6 +32,8 @@ class PaymentMethodViewController: UIViewController, UITableViewDelegate, UITabl
             dest.bank = bankList[indexPath.row]
         }
     }
+    
+
 
 }
 

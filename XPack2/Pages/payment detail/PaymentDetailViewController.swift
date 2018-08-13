@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PaymentDetailViewController: UIViewController {
     
@@ -31,7 +32,53 @@ class PaymentDetailViewController: UIViewController {
     }
     
     @IBAction func goToFinishPayment(_ sender: Any) {
+        self.saveOrder()
         performSegue(withIdentifier: "FinishOrderSegue", sender: nil)
+    }
+    
+    private func saveOrder(){
+        let moc = CoreDataHelper().objectContext()
+        
+        let request: NSFetchRequest<Order> = Order.fetchRequest()
+        do{
+            let orders = try moc.fetch(request) as [Order]
+            
+            for order in orders{
+                moc.delete(order)
+            }
+            try moc.save()
+        }catch{
+            
+        }
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        let newOrder = Order(context: moc)
+        newOrder.timestamp = Date()
+        newOrder.bowl = bowl
+        
+        do{
+            try moc.save()
+        }catch{
+            //This should never happen
+            //One of the reason could be:
+            //- Out of memory
+            //- System failure
+            //- Directory not found
+            //- Model object deleted
+            
+            fatalError("Fail to save the data")
+        }
+        
+        
+        
     }
     
 }

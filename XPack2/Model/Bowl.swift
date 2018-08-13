@@ -8,10 +8,15 @@
 
 import Foundation
 
-struct Bowl {
-    
+public class Bowl: NSObject,NSCoding{
+
     // Dictionary for storing bowl composition
-    var ingredients: [IngredientType:[String:Double]] = [:]
+    
+    var ingredients: [IngredientType:[String:Double]]  = [:]
+    
+    override init() {
+        
+    }
     
     // Computed variable, bowl type depend on how many protein quantity
     var bowlType: BowlType {
@@ -78,6 +83,40 @@ struct Bowl {
             
             return finalPrice + bowlType.rawValue
         }
+    }
+    
+    
+    public func encode(with aCoder: NSCoder) {
+        var temp = [String:[String:Double]]()
+        for (key, value) in ingredients {
+            temp[key.rawValue] = value
+        }
+        aCoder.encode(temp, forKey: "ingredients")
+        
+        //Doesnt Works
+//        aCoder.encode(self.ingredients, forKey: "ingredients")
+        
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+
+        //Works
+        
+        guard let tempData = aDecoder.decodeObject(forKey: "ingredients") as? [String:[String:Double]] else {return }
+
+        var tempResult = [IngredientType:[String:Double]]()
+        for (key, value) in tempData {
+            tempResult[IngredientType(rawValue: key)!] = value
+        }
+        self.ingredients = tempResult
+        
+        //Doesnt Works
+//        if let ing = aDecoder.decodeObject(forKey: "ingredients") as? [IngredientType:[String:Double]]{
+//            self.ingredients = ing
+//        }else{
+//            self.ingredients = [:]
+//        }
+        
     }
     
     // total sum ingredient for each type

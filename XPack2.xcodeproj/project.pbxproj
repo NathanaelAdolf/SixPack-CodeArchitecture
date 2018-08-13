@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D87676D21211C4A00B0CE21 /* ACCustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87676C21211C4A00B0CE21 /* ACCustomNavigation.swift */; };
+		7D87677121211EB900B0CE21 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D87676F21211EB900B0CE21 /* History.storyboard */; };
+		7D87677321211F1800B0CE21 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */; };
+		7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D876774212121CD00B0CE21 /* CoreDataHelper.swift */; };
 		F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742052117E23C00F6CD12 /* AppDelegate.swift */; };
 		F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742072117E23C00F6CD12 /* CustomerInformationViewController.swift */; };
 		F407420B2117E23C00F6CD12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40742092117E23C00F6CD12 /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D87676C21211C4A00B0CE21 /* ACCustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACCustomNavigation.swift; sourceTree = "<group>"; };
+		7D87677021211EB900B0CE21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/View/Base.lproj/History.storyboard; sourceTree = "<group>"; };
+		7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		7D876774212121CD00B0CE21 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		F40742022117E23C00F6CD12 /* XPack2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPack2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40742052117E23C00F6CD12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40742072117E23C00F6CD12 /* CustomerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationViewController.swift; sourceTree = "<group>"; };
@@ -83,10 +91,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D87676B21211C4A00B0CE21 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7D87676C21211C4A00B0CE21 /* ACCustomNavigation.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		7D87676E21211E8900B0CE21 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				7D87676F21211EB900B0CE21 /* History.storyboard */,
+				7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		F40741F92117E23C00F6CD12 = {
 			isa = PBXGroup;
 			children = (
-				F4BC77F92119306200F1C758 /* XPack.xcdatamodeld */,
 				F40742042117E23C00F6CD12 /* XPack2 */,
 				F40742032117E23C00F6CD12 /* Products */,
 			);
@@ -103,6 +127,7 @@
 		F40742042117E23C00F6CD12 /* XPack2 */ = {
 			isa = PBXGroup;
 			children = (
+				F4BC77F92119306200F1C758 /* XPack.xcdatamodeld */,
 				F468E290211E863000C859DC /* fonts */,
 				F40742052117E23C00F6CD12 /* AppDelegate.swift */,
 				F4FE7974211A99920068674F /* Pages */,
@@ -150,6 +175,7 @@
 				F4BC78052119499B00F1C758 /* Bowl.swift */,
 				F4D1BA2E211D3CE500AC1372 /* Ingredient.swift */,
 				F4F430362119960200B2B859 /* IngredientData.swift */,
+				7D87676B21211C4A00B0CE21 /* Util */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +195,7 @@
 				F4BC7800211936B600F1C758 /* EnumHelper.swift */,
 				F432E627211E712A00C6C663 /* ColorHelper.swift */,
 				F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */,
+				7D876774212121CD00B0CE21 /* CoreDataHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -214,6 +241,7 @@
 		F4FE7974211A99920068674F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				7D87676E21211E8900B0CE21 /* History */,
 				F432E62C211E7AAC00C6C663 /* payment detail */,
 				F432E629211E761E00C6C663 /* payment */,
 				F4F2FB5C211BEC2B003898E6 /* checkout */,
@@ -293,6 +321,7 @@
 				F4892FA0211EE22F00D5B92E /* SFCompactText-Medium.otf in Resources */,
 				F4FE7970211A8D8B0068674F /* IngridientChoice.storyboard in Resources */,
 				F407420B2117E23C00F6CD12 /* Main.storyboard in Resources */,
+				7D87677121211EB900B0CE21 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +335,9 @@
 				F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */,
 				F432E628211E712A00C6C663 /* ColorHelper.swift in Sources */,
 				F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */,
+				7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */,
 				F4F2AC87211D852900374657 /* CheckoutItemTableViewCell.swift in Sources */,
+				7D87677321211F1800B0CE21 /* HistoryTableViewController.swift in Sources */,
 				F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */,
 				F4BC78062119499B00F1C758 /* Bowl.swift in Sources */,
 				F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */,
@@ -319,6 +350,7 @@
 				F4FE796E211A84F60068674F /* BowlDetailTableViewCell.swift in Sources */,
 				F4F430372119960200B2B859 /* IngredientData.swift in Sources */,
 				F432E62B211E763C00C6C663 /* PaymentMethodViewController.swift in Sources */,
+				7D87676D21211C4A00B0CE21 /* ACCustomNavigation.swift in Sources */,
 				F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */,
 				F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */,
 			);
@@ -327,6 +359,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7D87676F21211EB900B0CE21 /* History.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D87677021211EB900B0CE21 /* Base */,
+			);
+			name = History.storyboard;
+			sourceTree = "<group>";
+		};
 		F40742092117E23C00F6CD12 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

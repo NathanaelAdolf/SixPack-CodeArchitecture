@@ -8,7 +8,19 @@
 
 import Foundation
 
-struct IngredientData {
+class IngredientData: NSObject,NSCoding {
+    
+    override init() {
+        
+    }
+    func encode(with aCoder: NSCoder) {
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+    }
+    
     let data = [
         ["Brown Rice", "Romaine Lettuce", "Sweet Potato", "Whole-wheat Pasta", "Baby Spinach", "Quinoa"],
         ["Chicken Breast", "Dory", "Tilapia", "Tofu", "Rib Eye Steak", "Salmon"],

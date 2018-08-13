@@ -78,7 +78,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="s9h-4V-I2o"/>
+                    <navigationItem key="navigationItem" id="s9h-4V-I2o">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="cQx-xA-BCG">
+                            <color key="tintColor" red="0.27843137254901962" green="0.37254901960784315" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="Nzl-ep-kUV" kind="presentation" id="j2Y-au-hjA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="qG4-IV-d9O" id="HZY-Zy-CXu"/>
@@ -117,7 +124,15 @@
                 <viewControllerPlaceholder storyboardName="ChooseMenu" id="c5o-SC-54y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qL6-h0-ZLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="131"/>
+            <point key="canvasLocation" x="2098" y="355"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="Ra4-wL-Vhv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="History" id="Nzl-ep-kUV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGc-wV-zWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="-210"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
