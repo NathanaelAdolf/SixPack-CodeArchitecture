@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LjM-Y7-Uld">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFCompactText-Bold.otf">
+            <string>SFCompactText-Bold</string>
+        </array>
+        <array key="SFCompactText-Regular.otf">
+            <string>SFCompactText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Customer Information View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CustomerInformationViewController" customModule="XPack2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vw1-hy-zs0">
+                                <rect key="frame" x="30" y="319" width="315" height="29"/>
+                                <segments>
+                                    <segment title="Dine In"/>
+                                    <segment title="Take Away"/>
+                                </segments>
+                                <color key="tintColor" red="0.27843137254901962" green="0.37254901960784315" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lBC-tu-5Yu">
+                                <rect key="frame" x="30" y="214" width="315" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9k-yL-ECf">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email (Optional)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qG4-IV-d9O">
+                                        <rect key="frame" x="0.0" y="50" width="315" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWJ-So-7U3">
+                                <rect key="frame" x="30" y="397" width="315" height="41"/>
+                                <fontDescription key="fontDescription" name="SFCompactText-Bold" family="SF Compact Text" pointSize="24"/>
+                                <color key="tintColor" red="0.2784313725" green="0.37254901959999998" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Let's Order"/>
+                                <connections>
+                                    <action selector="goToBowlPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hM-Sh-oXN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vw1-hy-zs0" firstAttribute="centerX" secondItem="lBC-tu-5Yu" secondAttribute="centerX" id="23s-q8-yj9"/>
+                            <constraint firstItem="lBC-tu-5Yu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="3IN-cn-wKr"/>
+                            <constraint firstItem="CWJ-So-7U3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4ZZ-j8-TfH"/>
+                            <constraint firstItem="CWJ-So-7U3" firstAttribute="centerX" secondItem="vw1-hy-zs0" secondAttribute="centerX" id="4xL-y0-upf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vw1-hy-zs0" secondAttribute="trailing" constant="30" id="DJO-fy-7OS"/>
+                            <constraint firstItem="vw1-hy-zs0" firstAttribute="top" secondItem="lBC-tu-5Yu" secondAttribute="bottom" constant="25" id="FAY-Gy-5FD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lBC-tu-5Yu" secondAttribute="trailing" constant="30" id="RMM-AR-QtM"/>
+                            <constraint firstItem="vw1-hy-zs0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="geA-Bl-aAb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CWJ-So-7U3" secondAttribute="trailing" constant="30" id="jO4-iB-k8V"/>
+                            <constraint firstItem="CWJ-So-7U3" firstAttribute="top" secondItem="vw1-hy-zs0" secondAttribute="bottom" constant="50" id="jRp-JW-ezR"/>
+                            <constraint firstItem="lBC-tu-5Yu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="onQ-9d-bQB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="s9h-4V-I2o">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="cQx-xA-BCG">
+                            <color key="tintColor" red="0.27843137254901962" green="0.37254901960784315" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="Cxr-PM-dHT" kind="show" id="j2Y-au-hjA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="qG4-IV-d9O" id="HZY-Zy-CXu"/>
+                        <outlet property="nameTextField" destination="b9k-yL-ECf" id="gPG-gY-bcB"/>
+                        <segue destination="c5o-SC-54y" kind="show" identifier="GoToBowlPage" id="SwZ-B0-IRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.5999999999999" y="130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zct-Nq-gPR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LjM-Y7-Uld" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oqv-K0-aAA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cts-Md-hbE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytW-de-sli" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.80000000000001" y="130.88455772113943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hRJ-a5-ocW">
+            <objects>
+                <viewController id="Cxr-PM-dHT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="90p-V6-dc3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="g3r-Pl-yfx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dz8-pA-bGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="-210"/>
+        </scene>
+        <!--ChooseMenu-->
+        <scene sceneID="4aF-Cj-lXO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChooseMenu" id="c5o-SC-54y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qL6-h0-ZLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="355"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
