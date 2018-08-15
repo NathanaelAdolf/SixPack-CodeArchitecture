@@ -39,30 +39,10 @@ class PaymentDetailViewController: UIViewController {
     private func saveOrder(){
         let moc = CoreDataHelper().objectContext()
         
-        let request: NSFetchRequest<Order> = Order.fetchRequest()
-        do{
-            let orders = try moc.fetch(request) as [Order]
-            
-            for order in orders{
-                moc.delete(order)
-            }
-            try moc.save()
-        }catch{
-            
-        }
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
         let newOrder = Order(context: moc)
         newOrder.timestamp = Date()
         newOrder.bowl = bowl
+        
         
         do{
             try moc.save()

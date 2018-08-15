@@ -11,6 +11,10 @@
 		7D87677121211EB900B0CE21 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D87676F21211EB900B0CE21 /* History.storyboard */; };
 		7D87677321211F1800B0CE21 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */; };
 		7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D876774212121CD00B0CE21 /* CoreDataHelper.swift */; };
+		7DB29A6A2123C2EB00C4538B /* HistoryDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A692123C2EB00C4538B /* HistoryDetailCollectionViewController.swift */; };
+		7DB29A6C2123C5BD00C4538B /* HistoryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */; };
+		7DB29A6E2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */; };
+		7DB29A9521241EF400C4538B /* HistoryDetailCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */; };
 		F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742052117E23C00F6CD12 /* AppDelegate.swift */; };
 		F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742072117E23C00F6CD12 /* CustomerInformationViewController.swift */; };
 		F407420B2117E23C00F6CD12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40742092117E23C00F6CD12 /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 		7D87677021211EB900B0CE21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/View/Base.lproj/History.storyboard; sourceTree = "<group>"; };
 		7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		7D876774212121CD00B0CE21 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		7DB29A692123C2EB00C4538B /* HistoryDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionViewController.swift; sourceTree = "<group>"; };
+		7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryDetail.storyboard; sourceTree = "<group>"; };
+		7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionHeader.swift; sourceTree = "<group>"; };
 		F40742022117E23C00F6CD12 /* XPack2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPack2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40742052117E23C00F6CD12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40742072117E23C00F6CD12 /* CustomerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,17 @@
 				7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		7DB29A682123C2D200C4538B /* HistoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7DB29A692123C2EB00C4538B /* HistoryDetailCollectionViewController.swift */,
+				7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */,
+				7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */,
+				7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */,
+			);
+			path = HistoryDetail;
 			sourceTree = "<group>";
 		};
 		F40741F92117E23C00F6CD12 = {
@@ -241,6 +260,7 @@
 		F4FE7974211A99920068674F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				7DB29A682123C2D200C4538B /* HistoryDetail */,
 				7D87676E21211E8900B0CE21 /* History */,
 				F432E62C211E7AAC00C6C663 /* payment detail */,
 				F432E629211E761E00C6C663 /* payment */,
@@ -315,6 +335,7 @@
 				F40742102117E23D00F6CD12 /* LaunchScreen.storyboard in Resources */,
 				F4F2FB59211BE45B003898E6 /* CheckoutPage.storyboard in Resources */,
 				F432E631211E81E100C6C663 /* PaymentMethod.storyboard in Resources */,
+				7DB29A6C2123C5BD00C4538B /* HistoryDetail.storyboard in Resources */,
 				F4892FA1211EE22F00D5B92E /* SFCompactText-Regular.otf in Resources */,
 				F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */,
 				F4F4303C2119B80000B2B859 /* ChooseMenu.storyboard in Resources */,
@@ -332,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB29A9521241EF400C4538B /* HistoryDetailCollectionHeader.swift in Sources */,
 				F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */,
 				F432E628211E712A00C6C663 /* ColorHelper.swift in Sources */,
 				F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */,
@@ -342,6 +364,7 @@
 				F4BC78062119499B00F1C758 /* Bowl.swift in Sources */,
 				F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */,
 				F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */,
+				7DB29A6A2123C2EB00C4538B /* HistoryDetailCollectionViewController.swift in Sources */,
 				F4BC7801211936B600F1C758 /* EnumHelper.swift in Sources */,
 				F4BC77FB2119306200F1C758 /* XPack.xcdatamodeld in Sources */,
 				F4F430392119B5ED00B2B859 /* BowlViewController.swift in Sources */,
@@ -353,6 +376,7 @@
 				7D87676D21211C4A00B0CE21 /* ACCustomNavigation.swift in Sources */,
 				F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */,
 				F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */,
+				7DB29A6E2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

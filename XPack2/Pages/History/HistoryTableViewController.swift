@@ -21,7 +21,7 @@ class HistoryTableViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.detectAdaptiveClass()
+        
         self.setup()
         self.fetchOrder()
         
@@ -31,6 +31,7 @@ class HistoryTableViewController: UIViewController{
     private func setup(){
         
         historyTable.dataSource = self
+        historyTable.delegate = self
     
         dateFormat.dateFormat = "Y-M-d H:mm"
     }
@@ -40,7 +41,7 @@ class HistoryTableViewController: UIViewController{
         
         let orderRequest: NSFetchRequest<Order> = Order.fetchRequest()
         let sort: NSSortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
-        orderRequest.sortDescriptors?.append(sort)
+        orderRequest.sortDescriptors = [sort]
         
         do{
             try self.historyData = moc.fetch(orderRequest) as [Order]
@@ -49,6 +50,11 @@ class HistoryTableViewController: UIViewController{
             
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.detectAdaptiveClass(title: "History")
     }
     
     @IBAction func dismiss(){
@@ -61,7 +67,7 @@ class HistoryTableViewController: UIViewController{
     }
 }
 
-extension HistoryTableViewController: UITableViewDataSource{
+extension HistoryTableViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let data = historyData{
@@ -76,14 +82,42 @@ extension HistoryTableViewController: UITableViewDataSource{
         
         if let order = historyData?[indexPath.row]{
             
-            cell.textLabel?.text = dateFormat.string(from: order.timestamp!)
-            print(order.bowl?.ingredients)
-            cell.detailTextLabel?.text = "Rp. \(order.bowl?.price)"
-            
-            return cell
+            if let time = order.timestamp, let bowl = order.bowl{
+                
+                for ing in bowl.ingredients{
+                    
+                    for menu in ing.value{
+                        cell.imageView?.image = UIImage(named: menu.key)
+                        break
+                    }
+                    break
+                }
+                
+                
+                cell.textLabel?.text = dateFormat.string(from: time)
+                cell.detailTextLabel?.text = "\(bowl.bowlType) - Rp. \(bowl.price).000"
+                
+                return cell
+            }
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let order = historyData?[indexPath.row]{
+            
+            if let bowl = order.bowl{
+            
+                let sb = UIStoryboard(name: "HistoryDetail", bundle: nil).instantiateInitialViewController() as! HistoryDetailViewController
+                sb.bowl = bowl
+                sb.navTitle = "\(bowl.bowlType)"
+                show(sb, sender: nil)
+            
+            }
+            
+        }
     }
     
     

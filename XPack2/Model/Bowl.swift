@@ -14,6 +14,7 @@ public class Bowl: NSObject,NSCoding{
     
     var ingredients: [IngredientType:[String:Double]]  = [:]
     
+    
     override init() {
         
     }

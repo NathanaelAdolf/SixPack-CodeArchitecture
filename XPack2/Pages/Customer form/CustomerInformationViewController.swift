@@ -17,7 +17,8 @@ class CustomerInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.detectAdaptiveClass()
+        self.detectAdaptiveClass(title: "Order")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +28,7 @@ class CustomerInformationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        navigationController?.navigationBar.shadowImage = UIImage()
+
     }
 
     @IBAction func goToBowlPage(_ sender: Any) {
