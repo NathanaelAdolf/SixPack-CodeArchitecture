@@ -8,10 +8,7 @@
 
 import UIKit
 
-class IngridientSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, IngridientCellProtocol {
-    
-    @IBOutlet weak var ingridientTableView: UITableView!
-    @IBOutlet weak var priceLabel: UILabel!
+class IngridientSelectionViewController: UIViewController {
     
     var ingredientType: IngredientType = .base {
         didSet{
@@ -32,9 +29,19 @@ class IngridientSelectionViewController: UIViewController, UITableViewDelegate, 
     var bowl: Bowl = Bowl()
     var selectedIngredients: [String:Double] = [:]
     
+    weak var ingredientsView: IngridientChoiceView!
+    
     private var ingredients: [String] = []
     private var isChargedForAdditionalServing = false
     private var additionalCharge = 0
+    
+    override func loadView() {
+        super.loadView()
+
+        let ingView = IngridientChoiceView()
+        self.view.addSubview(ingView)
+        self.ingredientsView = ingView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +51,13 @@ class IngridientSelectionViewController: UIViewController, UITableViewDelegate, 
             selectedIngredients = bowl.ingredients[ingredientType]!
         }
         
-        ingridientTableView.delegate = self
-        ingridientTableView.dataSource = self
-        
         updatePriceBarItem()
         
         (isChargedForAdditionalServing, additionalCharge) = bowl.isChargedForAdditionalServing(type: ingredientType)
     }
     
     func updatePriceBarItem(){
-        priceLabel.text = "\(bowl.price)K"
+        ingredientsView.priceLabel?.text = "\(bowl.price)K"
     }
     
     // detect whether view contoller will disappear
@@ -65,55 +69,25 @@ class IngridientSelectionViewController: UIViewController, UITableViewDelegate, 
 }
 
 // Extensiom Table View
-extension IngridientSelectionViewController {
-    
+extension IngridientSelectionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ingredients.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IngridientCell", for: indexPath) as! IngridientTableViewCell
-        
-        let ingredientName = ingredients[indexPath.row]
-        
+        cell.cellConfig(withIngredients: ingredients,
+                        currentIndex: indexPath.row,
+                        type: ingredientType,
+                        chargeAmount: self.additionalCharge,
+                        isCharge: isChargedForAdditionalServing,
+                        selectedIng: selectedIngredients)
         cell.cellProtocol = self
-        
-        if let image = UIImage(named: ingredientName){
-            cell.ingredientImageView.image = image
-        }
-        
-        if let additionalPrice = IngredientData().additionalPrice[ingredientName] {
-            cell.ingridientNameLabel.text = "\(ingredientName) (+\(additionalPrice)K)"
-        } else {
-            cell.ingridientNameLabel.text = ingredientName
-        }
-        
-        if ingredientType == .protein {
-            cell.ingridientStepper.maximumValue = 3.0
-        } else {
-            cell.ingridientStepper.maximumValue = 5.0
-        }
-        
-        if let ingridientQty = selectedIngredients[ingredientName] {
-            cell.ingridientStepper.value = ingridientQty
-            cell.ingridientQuantityLabel.text = getDisplayedQuantityValueFromStepper(stepperValue: ingridientQty)
-        } else {
-            cell.ingridientStepper.value = 0.0
-            cell.ingridientQuantityLabel.text = "0"
-        }
-        
-        if isChargedForAdditionalServing {
-            cell.priceLabel.text = "+\(additionalCharge)K IDR"
-        } else {
-            cell.priceLabel.text = "+0K IDR"
-        }
         return cell
     }
 }
 
-// Extension CellProtocol
-extension IngridientSelectionViewController {
-    
+extension IngridientSelectionViewController: IngridientCellProtocol {
     // return value to be displayed in the cell
     func setQuantityLabel(ingridientName: String, stepper: UIStepper) -> String {
         
@@ -125,7 +99,7 @@ extension IngridientSelectionViewController {
         if isCharged != isChargedForAdditionalServing {
             isChargedForAdditionalServing = isCharged
             additionalCharge = chargeAmount
-            ingridientTableView.reloadData()
+            ingredientsView.tableView?.reloadData()
         }
         
         return getDisplayedQuantityValueFromStepper(stepperValue: stepper.value)

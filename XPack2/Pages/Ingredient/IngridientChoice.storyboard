@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pCO-QV-t0w">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pCO-QV-t0w">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +23,7 @@
         <scene sceneID="KRV-Ya-oTC">
             <objects>
                 <viewController id="pCO-QV-t0w" customClass="IngridientSelectionViewController" customModule="XPack2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wuK-xV-e0t">
+                    <view key="view" contentMode="scaleToFill" id="wuK-xV-e0t" customClass="IngridientChoiceView" customModule="XPack2" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -38,11 +35,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p3f-Lb-O8f" id="VCM-qw-VSJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-k6-edt">
-                                                    <rect key="frame" x="20" y="4" width="80" height="80"/>
+                                                    <rect key="frame" x="20" y="5" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.97254901959999995" green="0.57254901960000004" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="U1V-YJ-a9G"/>
@@ -50,13 +47,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Harga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpf-PY-ZPM">
-                                                    <rect key="frame" x="110" y="36.333333333333336" width="38" height="17"/>
+                                                    <rect key="frame" x="110" y="36.666666666666664" width="38" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="14"/>
                                                     <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nama baha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-gT-kJ8">
-                                                    <rect key="frame" x="110" y="4" width="73.333333333333314" height="17"/>
+                                                    <rect key="frame" x="110" y="5" width="73.333333333333314" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFCompactText-Medium" family="SF Compact Text" pointSize="14"/>
                                                     <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -73,7 +70,7 @@
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbt-kj-yu4">
-                                                    <rect key="frame" x="233.66666666666666" y="37" width="22.333333333333343" height="17"/>
+                                                    <rect key="frame" x="233.66666666666666" y="36.666666666666664" width="22.333333333333343" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="14"/>
                                                     <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -101,18 +98,22 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pCO-QV-t0w" id="GQE-IF-sZm"/>
+                                    <outlet property="delegate" destination="pCO-QV-t0w" id="pok-xS-YAL"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vW-GK-I84">
                                 <rect key="frame" x="0.0" y="702" width="375" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LL-81-9NO">
-                                        <rect key="frame" x="40.000000000000007" y="41.333333333333371" width="70.666666666666686" height="28.666666666666671"/>
+                                        <rect key="frame" x="40.000000000000007" y="40.666666666666629" width="70.666666666666686" height="28.666666666666671"/>
                                         <fontDescription key="fontDescription" name="SFCompactText-Bold" family="SF Compact Text" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKk-6c-iJJ">
-                                        <rect key="frame" x="298.66666666666669" y="41.333333333333371" width="46.333333333333314" height="28.666666666666671"/>
+                                        <rect key="frame" x="298.66666666666669" y="40.666666666666629" width="46.333333333333314" height="28.666666666666671"/>
                                         <fontDescription key="fontDescription" name="SFCompactText-Bold" family="SF Compact Text" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -140,13 +141,16 @@
                             <constraint firstItem="9vW-GK-I84" firstAttribute="trailing" secondItem="wrR-67-MKN" secondAttribute="trailing" id="u1D-Wk-MnO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wrR-67-MKN"/>
+                        <connections>
+                            <outlet property="priceLabel" destination="zKk-6c-iJJ" id="LDC-QP-si3"/>
+                            <outlet property="tableView" destination="ag0-WS-QbQ" id="TTZ-uJ-0RK"/>
+                            <outlet property="totalPriceView" destination="9vW-GK-I84" id="ejs-Ml-eQj"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="glW-Q4-ahf"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ingridientTableView" destination="ag0-WS-QbQ" id="JZj-ka-ARg"/>
-                        <outlet property="priceLabel" destination="zKk-6c-iJJ" id="zlB-ai-4jT"/>
                         <segue destination="Ber-n2-aqx" kind="unwind" identifier="unwindToBowlPage" unwindAction="unwindToBowlPage:" id="DCC-23-3DP"/>
                     </connections>
                 </viewController>
