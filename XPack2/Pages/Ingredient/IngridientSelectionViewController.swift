@@ -13,29 +13,31 @@ class IngridientSelectionViewController: UIViewController, UITableViewDelegate, 
     @IBOutlet weak var ingridientTableView: UITableView!
     @IBOutlet weak var priceLabel: UILabel!
     
-    var ingredients: [String] = []
-    var ingredientType: IngredientType = .base
+    var ingredientType: IngredientType = .base {
+        didSet{
+            switch ingredientType {
+            case .base:
+                ingredients = IngredientData().bases
+            case .protein:
+                ingredients = IngredientData().proteins
+            case .supplement:
+                ingredients = IngredientData().supplemets
+            case .topping:
+                ingredients = IngredientData().toppings
+            case .dressing:
+                ingredients = IngredientData().dressings
+            }
+        }
+    }
     var bowl: Bowl = Bowl()
     var selectedIngredients: [String:Double] = [:]
-    var isChargedForAdditionalServing = false
-    var additionalCharge = 0
+    
+    private var ingredients: [String] = []
+    private var isChargedForAdditionalServing = false
+    private var additionalCharge = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        switch ingredientType {
-        case .base:
-            ingredients = IngredientData().bases
-        case .protein:
-            ingredients = IngredientData().proteins
-        case .supplement:
-            ingredients = IngredientData().supplemets
-        case .topping:
-            ingredients = IngredientData().toppings
-        case .dressing:
-            ingredients = IngredientData().dressings
-        }
-        
         title = ingredientType.rawValue.capitalized
         
         if bowl.ingredients[ingredientType] != nil {
@@ -56,7 +58,7 @@ class IngridientSelectionViewController: UIViewController, UITableViewDelegate, 
     
     // detect whether view contoller will disappear
     override func viewWillDisappear(_ animated: Bool) {
-        if let dest = self.navigationController?.topViewController as? BowlViewController {
+        if let _ = self.navigationController?.topViewController as? BowlViewController {
             performSegue(withIdentifier: "unwindToBowlPage", sender: self)
         }
     }
@@ -126,7 +128,6 @@ extension IngridientSelectionViewController {
             ingridientTableView.reloadData()
         }
         
-        print(ingridientName ,stepper.value)
         return getDisplayedQuantityValueFromStepper(stepperValue: stepper.value)
     }
     

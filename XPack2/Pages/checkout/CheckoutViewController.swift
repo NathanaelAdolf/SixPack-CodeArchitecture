@@ -24,7 +24,7 @@ class CheckoutViewController: UIViewController, UITableViewDelegate, UITableView
         recapTableView.dataSource = self
         
         recapTableView.estimatedRowHeight = 60
-        recapTableView.rowHeight = UITableViewAutomaticDimension
+        recapTableView.rowHeight = UITableView.automaticDimension
         
         priceLabel.text = "IDR \(bowl.price)K"
         

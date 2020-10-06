@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D02B7FD252C162100A09235 /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B7FC252C162100A09235 /* IngredientType.swift */; };
+		7D02B7FF252C164400A09235 /* BowlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B7FE252C164400A09235 /* BowlType.swift */; };
+		7D02B805252C3D6500A09235 /* XPackAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B804252C3D6500A09235 /* XPackAPIHelper.swift */; };
+		7D02B807252C40B900A09235 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7D02B806252C40B900A09235 /* .gitignore */; };
 		7D87676D21211C4A00B0CE21 /* ACCustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87676C21211C4A00B0CE21 /* ACCustomNavigation.swift */; };
 		7D87677121211EB900B0CE21 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D87676F21211EB900B0CE21 /* History.storyboard */; };
 		7D87677321211F1800B0CE21 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */; };
@@ -30,10 +34,8 @@
 		F4892FA2211EE22F00D5B92E /* SFCompactText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */; };
 		F4BC77FB2119306200F1C758 /* XPack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4BC77F92119306200F1C758 /* XPack.xcdatamodeld */; };
 		F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */; };
-		F4BC7801211936B600F1C758 /* EnumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC7800211936B600F1C758 /* EnumHelper.swift */; };
 		F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */; };
 		F4BC78062119499B00F1C758 /* Bowl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78052119499B00F1C758 /* Bowl.swift */; };
-		F4D1BA2F211D3CE500AC1372 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1BA2E211D3CE500AC1372 /* Ingredient.swift */; };
 		F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */; };
 		F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AC84211D818A00374657 /* CheckoutViewController.swift */; };
 		F4F2AC87211D852900374657 /* CheckoutItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AC86211D852900374657 /* CheckoutItemTableViewCell.swift */; };
@@ -47,6 +49,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D02B7FC252C162100A09235 /* IngredientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientType.swift; sourceTree = "<group>"; };
+		7D02B7FE252C164400A09235 /* BowlType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlType.swift; sourceTree = "<group>"; };
+		7D02B804252C3D6500A09235 /* XPackAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPackAPIHelper.swift; sourceTree = "<group>"; };
+		7D02B806252C40B900A09235 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7D87676C21211C4A00B0CE21 /* ACCustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACCustomNavigation.swift; sourceTree = "<group>"; };
 		7D87677021211EB900B0CE21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/View/Base.lproj/History.storyboard; sourceTree = "<group>"; };
 		7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
@@ -72,10 +78,8 @@
 		F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Bold.otf"; sourceTree = "<group>"; };
 		F4BC77FA2119306200F1C758 /* XPack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XPack.xcdatamodel; sourceTree = "<group>"; };
 		F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientSelectionViewController.swift; sourceTree = "<group>"; };
-		F4BC7800211936B600F1C758 /* EnumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHelper.swift; sourceTree = "<group>"; };
 		F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
 		F4BC78052119499B00F1C758 /* Bowl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowl.swift; sourceTree = "<group>"; };
-		F4D1BA2E211D3CE500AC1372 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberHelper.swift; sourceTree = "<group>"; };
 		F4F2AC84211D818A00374657 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		F4F2AC86211D852900374657 /* CheckoutItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,12 +103,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D87676B21211C4A00B0CE21 /* Util */ = {
+		7D02B800252C16BB00A09235 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				7D87676C21211C4A00B0CE21 /* ACCustomNavigation.swift */,
 			);
-			path = Util;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7D02B803252C3D4A00A09235 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7D3D1963252C124A00FF2C7D /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				7D02B800252C16BB00A09235 /* UI */,
+				7D3D1964252C125700FF2C7D /* Colours */,
+				F468E290211E863000C859DC /* Fonts */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		7D3D1964252C125700FF2C7D /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				F432E627211E712A00C6C663 /* ColorHelper.swift */,
+			);
+			path = Colours;
+			sourceTree = "<group>";
+		};
+		7D3D1966252C12D100FF2C7D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7D02B803252C3D4A00A09235 /* Networking */,
+				7D3D1967252C12E400FF2C7D /* Core Data */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7D3D1967252C12E400FF2C7D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				F4BC77F92119306200F1C758 /* XPack.xcdatamodeld */,
+				7D876774212121CD00B0CE21 /* CoreDataHelper.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		7D87676E21211E8900B0CE21 /* History */ = {
@@ -130,6 +177,7 @@
 		F40741F92117E23C00F6CD12 = {
 			isa = PBXGroup;
 			children = (
+				7D02B806252C40B900A09235 /* .gitignore */,
 				F40742042117E23C00F6CD12 /* XPack2 */,
 				F40742032117E23C00F6CD12 /* Products */,
 			);
@@ -146,15 +194,16 @@
 		F40742042117E23C00F6CD12 /* XPack2 */ = {
 			isa = PBXGroup;
 			children = (
-				F4BC77F92119306200F1C758 /* XPack.xcdatamodeld */,
-				F468E290211E863000C859DC /* fonts */,
 				F40742052117E23C00F6CD12 /* AppDelegate.swift */,
-				F4FE7974211A99920068674F /* Pages */,
-				F4BC78042119497600F1C758 /* Model */,
-				F4DA8AA4211EA7CF00D02626 /* Helper */,
-				F4BC78072119698A00F1C758 /* View */,
-				F407420C2117E23D00F6CD12 /* Assets.xcassets */,
+				F40742092117E23C00F6CD12 /* Main.storyboard */,
+				F407420E2117E23D00F6CD12 /* LaunchScreen.storyboard */,
 				F40742112117E23D00F6CD12 /* Info.plist */,
+				F407420C2117E23D00F6CD12 /* Assets.xcassets */,
+				7D3D1963252C124A00FF2C7D /* Themes */,
+				F4BC78042119497600F1C758 /* Common Model */,
+				F4FE7974211A99920068674F /* Pages */,
+				F4DA8AA4211EA7CF00D02626 /* Helper */,
+				7D3D1966252C12D100FF2C7D /* Utilities */,
 			);
 			path = XPack2;
 			sourceTree = "<group>";
@@ -177,44 +226,33 @@
 			path = "payment detail";
 			sourceTree = "<group>";
 		};
-		F468E290211E863000C859DC /* fonts */ = {
+		F468E290211E863000C859DC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */,
 				F4892F9D211EE22F00D5B92E /* SFCompactText-Medium.otf */,
 				F4892F9E211EE22F00D5B92E /* SFCompactText-Regular.otf */,
 			);
-			path = fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
-		F4BC78042119497600F1C758 /* Model */ = {
+		F4BC78042119497600F1C758 /* Common Model */ = {
 			isa = PBXGroup;
 			children = (
 				F4F2FB5A211BE4B5003898E6 /* Customer.swift */,
 				F4BC78052119499B00F1C758 /* Bowl.swift */,
-				F4D1BA2E211D3CE500AC1372 /* Ingredient.swift */,
+				7D02B7FE252C164400A09235 /* BowlType.swift */,
+				7D02B7FC252C162100A09235 /* IngredientType.swift */,
 				F4F430362119960200B2B859 /* IngredientData.swift */,
-				7D87676B21211C4A00B0CE21 /* Util */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F4BC78072119698A00F1C758 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F40742092117E23C00F6CD12 /* Main.storyboard */,
-				F407420E2117E23D00F6CD12 /* LaunchScreen.storyboard */,
-			);
-			path = View;
+			path = "Common Model";
 			sourceTree = "<group>";
 		};
 		F4DA8AA4211EA7CF00D02626 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				F4BC7800211936B600F1C758 /* EnumHelper.swift */,
-				F432E627211E712A00C6C663 /* ColorHelper.swift */,
 				F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */,
-				7D876774212121CD00B0CE21 /* CoreDataHelper.swift */,
+				7D02B804252C3D6500A09235 /* XPackAPIHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -239,14 +277,14 @@
 			path = Bowl;
 			sourceTree = "<group>";
 		};
-		F4FE7972211A98FD0068674F /* Ingridient */ = {
+		F4FE7972211A98FD0068674F /* Ingredient */ = {
 			isa = PBXGroup;
 			children = (
 				F4FE796F211A8D8B0068674F /* IngridientChoice.storyboard */,
 				F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */,
 				F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */,
 			);
-			path = Ingridient;
+			path = Ingredient;
 			sourceTree = "<group>";
 		};
 		F4FE7973211A99200068674F /* Customer form */ = {
@@ -265,7 +303,7 @@
 				F432E62C211E7AAC00C6C663 /* payment detail */,
 				F432E629211E761E00C6C663 /* payment */,
 				F4F2FB5C211BEC2B003898E6 /* checkout */,
-				F4FE7972211A98FD0068674F /* Ingridient */,
+				F4FE7972211A98FD0068674F /* Ingredient */,
 				F4FE7971211A98D30068674F /* Bowl */,
 				F4FE7973211A99200068674F /* Customer form */,
 			);
@@ -304,6 +342,7 @@
 				TargetAttributes = {
 					F40742012117E23C00F6CD12 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -338,6 +377,7 @@
 				7DB29A6C2123C5BD00C4538B /* HistoryDetail.storyboard in Resources */,
 				F4892FA1211EE22F00D5B92E /* SFCompactText-Regular.otf in Resources */,
 				F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */,
+				7D02B807252C40B900A09235 /* .gitignore in Resources */,
 				F4F4303C2119B80000B2B859 /* ChooseMenu.storyboard in Resources */,
 				F4892FA0211EE22F00D5B92E /* SFCompactText-Medium.otf in Resources */,
 				F4FE7970211A8D8B0068674F /* IngridientChoice.storyboard in Resources */,
@@ -354,25 +394,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DB29A9521241EF400C4538B /* HistoryDetailCollectionHeader.swift in Sources */,
+				7D02B7FF252C164400A09235 /* BowlType.swift in Sources */,
 				F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */,
 				F432E628211E712A00C6C663 /* ColorHelper.swift in Sources */,
 				F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */,
 				7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */,
 				F4F2AC87211D852900374657 /* CheckoutItemTableViewCell.swift in Sources */,
 				7D87677321211F1800B0CE21 /* HistoryTableViewController.swift in Sources */,
+				7D02B7FD252C162100A09235 /* IngredientType.swift in Sources */,
 				F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */,
 				F4BC78062119499B00F1C758 /* Bowl.swift in Sources */,
 				F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */,
 				F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */,
 				7DB29A6A2123C2EB00C4538B /* HistoryDetailCollectionViewController.swift in Sources */,
-				F4BC7801211936B600F1C758 /* EnumHelper.swift in Sources */,
 				F4BC77FB2119306200F1C758 /* XPack.xcdatamodeld in Sources */,
 				F4F430392119B5ED00B2B859 /* BowlViewController.swift in Sources */,
 				F4F2FB5B211BE4B5003898E6 /* Customer.swift in Sources */,
-				F4D1BA2F211D3CE500AC1372 /* Ingredient.swift in Sources */,
 				F4FE796E211A84F60068674F /* BowlDetailTableViewCell.swift in Sources */,
 				F4F430372119960200B2B859 /* IngredientData.swift in Sources */,
 				F432E62B211E763C00C6C663 /* PaymentMethodViewController.swift in Sources */,
+				7D02B805252C3D6500A09235 /* XPackAPIHelper.swift in Sources */,
 				7D87676D21211C4A00B0CE21 /* ACCustomNavigation.swift in Sources */,
 				F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */,
 				F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */,
@@ -560,7 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.athoya.XPack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -577,7 +618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.athoya.XPack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

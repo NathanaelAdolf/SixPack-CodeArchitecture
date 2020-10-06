@@ -17,18 +17,8 @@ class CustomerInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.detectAdaptiveClass(title: "Order")
+        self.setupXPackNavigationBarFor(title: "Order")
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
     }
 
     @IBAction func goToBowlPage(_ sender: Any) {
@@ -48,19 +38,14 @@ class CustomerInformationViewController: UIViewController {
     
     func showAlertMessage(){
         // create the alert
-        let alert = UIAlertController(title: "Notice", message: "Please fill your name", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Notice", message: "Please fill your name", preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
 
-    }
-    
-    @IBAction func unwindToCustomerDetail(_ sender: UIStoryboardSegue) {
-        let sourceViewController = sender.source
-        // Use data from the view controller which initiated the unwind segue
     }
     
 }

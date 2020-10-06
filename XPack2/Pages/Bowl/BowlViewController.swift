@@ -15,7 +15,7 @@ class BowlViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var bowlTypeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    var bowlIngredients: [IngredientType] = [.base, .protein, .supplement, .topping, .dressing]
+    var bowlIngredients: [IngredientType] = IngredientType.allCases
     var bowl: Bowl = Bowl()
     var customer: Customer = Customer()
     
@@ -26,26 +26,21 @@ class BowlViewController: UIViewController, UITableViewDelegate, UITableViewData
         bowlContentTableView.dataSource = self
 
         bowlContentTableView.estimatedRowHeight = 60
-        bowlContentTableView.rowHeight = UITableViewAutomaticDimension
+        bowlContentTableView.rowHeight = UITableView.automaticDimension
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
-        
         refreshView()
     }
     
     
     // Unwind function to this controller
     @IBAction func unwindToBowlPage(_ sender: UIStoryboardSegue) {
-        if let source = sender.source as? IngridientSelectionViewController {
-            
-            bowl.ingredients[source.ingredientType] = source.selectedIngredients.filter{ $0.value > 0 }
+        if let _ = sender.source as? IngridientSelectionViewController {
             refreshView()
         }
-        // Use data from the view controller which initiated the unwind segue
+        
     }
     
     // Refresh the view so that match with the latest changes from ingredient

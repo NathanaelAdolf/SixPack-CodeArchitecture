@@ -10,14 +10,45 @@ import Foundation
 
 public class Bowl: NSObject,NSCoding{
 
-    // Dictionary for storing bowl composition
+    var ingredients: [IngredientType: [String:Double] ]  = [:]
     
-    var ingredients: [IngredientType:[String:Double]]  = [:]
+    override init(){
+        super.init()
+    }
     
     
-    override init() {
+    public func encode(with aCoder: NSCoder) {
+        var temp = [String:[String:Double]]()
+        for (key, value) in ingredients {
+            
+            temp[key.rawValue] = value
+        }
+        
+        aCoder.encode(temp, forKey: "ingredients")
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+
+        //Works
+        guard let tempData = aDecoder.decodeObject(forKey: "ingredients") as? [String:[String:Double]] else {return }
+
+        //return it to enum
+        var tempResult = [IngredientType:[String:Double]]()
+        for (key, value) in tempData {
+            tempResult[IngredientType(rawValue: key)!] = value
+        }
+        
+        self.ingredients = tempResult
         
     }
+}
+
+
+
+
+
+// Add business case functionality
+extension Bowl{
     
     // Computed variable, bowl type depend on how many protein quantity
     var bowlType: BowlType {
@@ -55,7 +86,7 @@ public class Bowl: NSObject,NSCoding{
                 .topping: 0,
                 .dressing: 0,
             ]
-            var ingredientBase: [IngredientType:Double] = getIngredientBaseForBowlType()
+            let ingredientBase: [IngredientType:Double] = getIngredientBaseForBowlType()
             
             // calculate if there any item with additional price, and count how many item on each ingredient type
             for (bowlKey, bowlValue) in ingredients {
@@ -87,38 +118,7 @@ public class Bowl: NSObject,NSCoding{
     }
     
     
-    public func encode(with aCoder: NSCoder) {
-        var temp = [String:[String:Double]]()
-        for (key, value) in ingredients {
-            temp[key.rawValue] = value
-        }
-        aCoder.encode(temp, forKey: "ingredients")
-        
-        //Doesnt Works
-//        aCoder.encode(self.ingredients, forKey: "ingredients")
-        
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
 
-        //Works
-        
-        guard let tempData = aDecoder.decodeObject(forKey: "ingredients") as? [String:[String:Double]] else {return }
-
-        var tempResult = [IngredientType:[String:Double]]()
-        for (key, value) in tempData {
-            tempResult[IngredientType(rawValue: key)!] = value
-        }
-        self.ingredients = tempResult
-        
-        //Doesnt Works
-//        if let ing = aDecoder.decodeObject(forKey: "ingredients") as? [IngredientType:[String:Double]]{
-//            self.ingredients = ing
-//        }else{
-//            self.ingredients = [:]
-//        }
-        
-    }
     
     // total sum ingredient for each type
     func sumTotalIngredients(type: IngredientType) -> Double {
@@ -140,7 +140,7 @@ public class Bowl: NSObject,NSCoding{
     // Calculate addtional serving
     func isChargedForAdditionalServing(type: IngredientType) -> (Bool, Int) {
         
-        var ingredientBase = getIngredientBaseForBowlType()
+        let ingredientBase = getIngredientBaseForBowlType()
         var count = 0
         
         if let ingredientTemp = ingredients[type] {
@@ -160,7 +160,7 @@ public class Bowl: NSObject,NSCoding{
         return (false, 0)
     }
     
-    // Dapeting info bowl nya kalo petite apa dll
+    // Dapetin info bowl nya kalo petite apa dll
     func getBowlTypeDetailInfo() -> (String,String) {
         if bowlType == .petite {
             return ("Petite", "You can have 1/2 protein, 2 supplements and 1 each others")

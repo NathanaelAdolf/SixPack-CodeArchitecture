@@ -37,28 +37,19 @@ class PaymentDetailViewController: UIViewController {
     }
     
     private func saveOrder(){
-        let moc = CoreDataHelper().objectContext()
+        //Save your order here
+        let context = CoreDataHelper().objectContext()
         
-        let newOrder = Order(context: moc)
+        let newOrder = Order(context: context)
+        
         newOrder.timestamp = Date()
-        newOrder.bowl = bowl
-        
+        newOrder.bowl = self.bowl
         
         do{
-            try moc.save()
+            try context.save()
+            print("successfully saving the order")
         }catch{
-            //This should never happen
-            //One of the reason could be:
-            //- Out of memory
-            //- System failure
-            //- Directory not found
-            //- Model object deleted
-            
-            fatalError("Fail to save the data")
+            print("error saving data")
         }
-        
-        
-        
     }
-    
 }

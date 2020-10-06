@@ -10,51 +10,46 @@ import UIKit
 import CoreData
 
 
-class HistoryTableViewController: UIViewController{
+class HistoryTableViewController: UIViewController, UITableViewDataSource{
     
     @IBOutlet weak var historyTable: UITableView!
-    
-    private var historyData: [Order]?
-    
+    var allOrder: [Order]? = []
     private var dateFormat = DateFormatter()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        self.setup()
+        self.setupView()
         self.fetchOrder()
-        
-        
     }
     
-    private func setup(){
-        
+    private func setupView(){
+        //Setup the view delegate / data source here
         historyTable.dataSource = self
-        historyTable.delegate = self
-    
         dateFormat.dateFormat = "Y-M-d H:mm"
     }
     
     private func fetchOrder(){
-        let moc = CoreDataHelper().objectContext()
+       // Fetch all the order here
+        let context = CoreDataHelper().objectContext()
+        let orderFetch: NSFetchRequest<Order> = Order.fetchRequest()
         
-        let orderRequest: NSFetchRequest<Order> = Order.fetchRequest()
-        let sort: NSSortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
-        orderRequest.sortDescriptors = [sort]
+        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        orderFetch.sortDescriptors = [sortDescriptor]
         
         do{
-            try self.historyData = moc.fetch(orderRequest) as [Order]
+            self.allOrder = try context.fetch(orderFetch) as [Order]?
+            guard let _ = allOrder else { return }
             
         }catch{
-            
+            print("error fetching data from order")
         }
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.detectAdaptiveClass(title: "History")
+        self.setupXPackNavigationBarFor(title: "History")
     }
     
     @IBAction func dismiss(){
@@ -62,63 +57,34 @@ class HistoryTableViewController: UIViewController{
         self.show(sb, sender: nil)
     }
     
-    deinit {
-        print("deinit")
-    }
-}
-
-extension HistoryTableViewController: UITableViewDataSource, UITableViewDelegate{
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let data = historyData{
-            return data.count
+        
+        if let allOrder = self.allOrder{
+            return allOrder.count
         }
         return 0
+        
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = historyTable.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
         
-        if let order = historyData?[indexPath.row]{
-            
-            if let time = order.timestamp, let bowl = order.bowl{
-                
-                for ing in bowl.ingredients{
-                    
-                    for menu in ing.value{
-                        cell.imageView?.image = UIImage(named: menu.key)
-                        break
-                    }
-                    break
-                }
-                
-                
-                cell.textLabel?.text = dateFormat.string(from: time)
-                cell.detailTextLabel?.text = "\(bowl.bowlType) - Rp. \(bowl.price).000"
-                
-                return cell
-            }
+        guard
+            let order = self.allOrder,
+            let date = order[indexPath.row].timestamp,
+            let bowlType = order[indexPath.row].bowl?.bowlType,
+            let price = order[indexPath.row].bowl?.price
+        else {
+                return UITableViewCell()
         }
         
-        return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cell.textLabel?.text = dateFormat.string(from: date)
+        cell.detailTextLabel?.text = "\(bowlType) - \(price)"
         
-        if let order = historyData?[indexPath.row]{
-            
-            if let bowl = order.bowl{
-            
-                let sb = UIStoryboard(name: "HistoryDetail", bundle: nil).instantiateInitialViewController() as! HistoryDetailViewController
-                sb.bowl = bowl
-                sb.navTitle = "\(bowl.bowlType)"
-                show(sb, sender: nil)
-            
-            }
-            
-        }
+        return cell
+        
     }
     
     
 }
+

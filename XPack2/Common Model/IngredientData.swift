@@ -8,18 +8,8 @@
 
 import Foundation
 
-class IngredientData: NSObject,NSCoding {
+class IngredientData {
     
-    override init() {
-        
-    }
-    func encode(with aCoder: NSCoder) {
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-    }
     
     let data = [
         ["Brown Rice", "Romaine Lettuce", "Sweet Potato", "Whole-wheat Pasta", "Baby Spinach", "Quinoa"],

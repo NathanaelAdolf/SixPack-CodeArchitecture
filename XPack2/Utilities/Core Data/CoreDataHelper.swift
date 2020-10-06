@@ -12,7 +12,8 @@ import UIKit
 class CoreDataHelper{
     
     func objectContext() -> NSManagedObjectContext{
-        guard var appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             //This should never happen
             return NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         }

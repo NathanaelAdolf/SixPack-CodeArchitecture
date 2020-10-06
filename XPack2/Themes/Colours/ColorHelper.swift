@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class ColorHelper {
+class XPackColours {
     
-    func getDarkGreen() -> UIColor {
+    static var secondary: UIColor {
         let r = CGFloat(71.0/255.0)
         let g = CGFloat(95.0/255.0)
         let b = CGFloat(55.0/255.0)
@@ -19,7 +19,7 @@ class ColorHelper {
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
     
-    func getMainOrange() -> UIColor {
+    static var primary: UIColor {
         let r = CGFloat(248.0/255.0)
         let g = CGFloat(146.0/255.0)
         let b = CGFloat(1.0/255.0)
