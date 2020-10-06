@@ -111,11 +111,11 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		7D02B803252C3D4A00A09235 /* Networking */ = {
+		7D02B803252C3D4A00A09235 /* Networking (Example) */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Networking;
+			path = "Networking (Example)";
 			sourceTree = "<group>";
 		};
 		7D3D1963252C124A00FF2C7D /* Themes */ = {
@@ -139,7 +139,7 @@
 		7D3D1966252C12D100FF2C7D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				7D02B803252C3D4A00A09235 /* Networking */,
+				7D02B803252C3D4A00A09235 /* Networking (Example) */,
 				7D3D1967252C12E400FF2C7D /* Core Data */,
 			);
 			path = Utilities;
