@@ -21,7 +21,11 @@ class BowlViewController: UIViewController {
         bowlView.bowlContentTableView?.delegate = self
         bowlView.bowlContentTableView?.dataSource = self
         
-        //dummy data assignment -> function generate mock data
+        createDataMock()
+        
+    }
+    
+    func createDataMock(){
         customer.name = "Haryanto"
         customer.email = "abcdefghijklmn@gmail.com"
         
