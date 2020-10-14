@@ -27,5 +27,9 @@ class IngridientChoiceView: UIView {
     private func setupView() {
       backgroundColor = .white
     }
+    
+    func updatePriceBarItem(price: Int){
+        priceLabel?.text = "\(price)"
+    }
 
 }

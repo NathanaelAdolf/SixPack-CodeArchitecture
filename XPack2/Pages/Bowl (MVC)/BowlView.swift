@@ -34,9 +34,22 @@ class BowlView: UIView {
         setupView()
     }
     
+    public func refreshView(with customer: Customer, bowl: Bowl){
+        let (bowlTypeDescription, bowlTypeInfo) = bowl.getBowlTypeDetailInfo()
+
+        bowlTypeLabel?.text = "Hi \(customer.name),"
+        buildInfoLabel?.text = "You have \(bowlTypeDescription) bowl. \(bowlTypeInfo)"
+        bowlContentTableView?.reloadData()
+        priceLabel?.text = "\(bowl.price)K"
+    }
+    
+
+    
     private func setupView(){
         bowlContentTableView?.estimatedRowHeight = 60
         bowlContentTableView?.rowHeight = UITableView.automaticDimension
         self.backgroundColor = UIColor.white
     }
+    
+    
 }

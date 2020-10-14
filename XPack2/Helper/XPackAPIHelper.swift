@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+// All request in this helper goes to the backend
+class XPackAPIHelper{
+    
+    func getAllBowlData(){
+        
+    }
+    
+    func updateBowlData(){
+        
+    }
+    
+    func getUserProfile(){
+        
+    }
+}
