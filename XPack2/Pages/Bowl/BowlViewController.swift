@@ -9,10 +9,12 @@
 import UIKit
 
 class BowlViewController: UIViewController {
-    
-    @IBOutlet weak var bowlView :BowlView!
-    var bowlIngredients: [IngredientType] = IngredientType.allCases
     var bowl: Bowl = Bowl()
+    
+    
+    @IBOutlet weak var bowlView : BowlView!
+    var bowlIngredients: [IngredientType] = IngredientType.allCases
+    
     var customer: Customer = Customer()
     
     override func viewDidLoad() {
@@ -38,28 +40,17 @@ class BowlViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        refreshView()
+        bowlView.refreshView(with: customer, bowl: bowl)
     }
     
     // Unwind function to this controller
     @IBAction func unwindToBowlPage(_ sender: UIStoryboardSegue) {
         if let _ = sender.source as? IngridientSelectionViewController {
-            refreshView()
+            bowlView.refreshView(with: customer, bowl: bowl)
         }
         
     }
     
-    // Refresh the view so that match with the latest changes from ingredient
-    func refreshView(){//separate to other abstract view
-        let (bowlTypeDescription, bowlTypeInfo) = bowl.getBowlTypeDetailInfo()
-
-        bowlView.bowlTypeLabel?.text = "Hi \(customer.name),"
-        bowlView.buildInfoLabel?.text = "You have \(bowlTypeDescription) bowl. \(bowlTypeInfo)"
-        
-        bowlView.bowlContentTableView?.reloadData()
-        
-        bowlView.priceLabel?.text = "\(bowl.price)K"
-    }
     
     @IBAction func goToCheckoutPage(_ sender: Any) {
         performSegue(withIdentifier: "GoToCheckoutPage", sender: nil)
