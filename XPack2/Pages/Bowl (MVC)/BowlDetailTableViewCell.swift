@@ -14,15 +14,14 @@ class BowlDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setupCellFor(bowl: Bowl, type ingredientType: IngredientType){
+        if bowl.ingredients[ingredientType] != nil {
+            titleLabel.text = ingredientType.rawValue.capitalized
+            subtitleLabel.text = bowl.reduceIngridientStringFor(type: ingredientType)
+            quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(number: bowl.sumTotalIngredients(type: ingredientType))
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }
