@@ -156,6 +156,24 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		7D05C7B22538393200499D32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4F4303A2119B80000B2B859 /* ChooseMenu.storyboard */,
+				7D05C79E2536A9FD00499D32 /* BowlView.swift */,
+				F4FE796D211A84F60068674F /* BowlDetailTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D05C7B32538393B00499D32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4F430382119B5ED00B2B859 /* BowlViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		7D3D1963252C124A00FF2C7D /* Themes */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,10 +326,8 @@
 		F4FE7971211A98D30068674F /* Bowl (MVC) */ = {
 			isa = PBXGroup;
 			children = (
-				F4F4303A2119B80000B2B859 /* ChooseMenu.storyboard */,
-				7D05C79E2536A9FD00499D32 /* BowlView.swift */,
-				F4FE796D211A84F60068674F /* BowlDetailTableViewCell.swift */,
-				F4F430382119B5ED00B2B859 /* BowlViewController.swift */,
+				7D05C7B32538393B00499D32 /* Controller */,
+				7D05C7B22538393200499D32 /* View */,
 			);
 			path = "Bowl (MVC)";
 			sourceTree = "<group>";

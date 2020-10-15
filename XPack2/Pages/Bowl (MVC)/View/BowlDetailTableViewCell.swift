@@ -19,4 +19,6 @@ class BowlDetailTableViewCell: UITableViewCell {
         titleLabel.textColor = XPackColours.secondary
     }
     
+    //Paste step 12 Here
+    
 }

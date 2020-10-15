@@ -32,7 +32,7 @@ class CustomerInformationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? BowlViewController {
-            dest.customer = sender as! Customer
+            //dest.customer = sender as! Customer
         }
     }
     
