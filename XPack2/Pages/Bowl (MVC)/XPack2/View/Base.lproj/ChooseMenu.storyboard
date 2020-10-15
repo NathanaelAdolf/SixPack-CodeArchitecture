@@ -23,7 +23,7 @@
         <scene sceneID="1mN-Gj-RFu">
             <objects>
                 <viewController id="ZCQ-GD-ia1" customClass="BowlViewController" customModule="XPack2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tn0-IK-hBh" customClass="BowlView" customModule="XPack2" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="tn0-IK-hBh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -148,18 +148,11 @@
                             <constraint firstItem="tYd-2K-glV" firstAttribute="leading" secondItem="Fss-OW-5Qd" secondAttribute="leading" id="vWG-qz-AAl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fss-OW-5Qd"/>
-                        <connections>
-                            <outlet property="bowlContentTableView" destination="htd-va-rHZ" id="fnL-rV-M1z"/>
-                            <outlet property="bowlTypeLabel" destination="X35-oK-vek" id="xOx-TF-Lwl"/>
-                            <outlet property="buildInfoLabel" destination="Ndu-1j-QH4" id="DUm-Wr-7I7"/>
-                            <outlet property="priceLabel" destination="gw8-8L-cZz" id="5Vi-56-6Bk"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VUo-R0-De1"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bowlView" destination="tn0-IK-hBh" id="ANA-o7-Jl0"/>
                         <segue destination="cNC-6h-Hi4" kind="show" identifier="IngridientChoiceSegue" id="SCU-NX-VQ8"/>
                         <segue destination="eGG-qx-Uyg" kind="show" identifier="GoToCheckoutPage" id="1Ng-oB-abP"/>
                     </connections>
@@ -187,7 +180,7 @@
                 <viewControllerPlaceholder storyboardName="CheckoutPage" id="eGG-qx-Uyg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CgL-Os-Kcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842" y="1416"/>
+            <point key="canvasLocation" x="1989" y="1381"/>
         </scene>
     </scenes>
 </document>

@@ -19,15 +19,4 @@ class BowlDetailTableViewCell: UITableViewCell {
         titleLabel.textColor = XPackColours.secondary
     }
     
-    func setupCellFor(bowl: Bowl, type ingredientType: IngredientType){
-        titleLabel.text = ingredientType.rawValue.capitalized
-        subtitleLabel.text = bowl.reduceIngridientStringFor(type: ingredientType)
-        
-        let bowlSummary = bowl.sumTotalIngredients(type: ingredientType)
-        quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(for: bowlSummary)
-        
-    }
-
-    
-
 }

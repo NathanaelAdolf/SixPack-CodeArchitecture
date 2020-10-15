@@ -9,6 +9,6 @@
 import Foundation
 
 struct Customer {
-    var name: String = ""
-    var email: String = ""
+    var name: String = "Okat"
+    var email: String = "Hello@mail.com"
 }
