@@ -10,7 +10,7 @@ import Foundation
 
 class NumberHelper {
     // Function to remove decimal di belakang kalo 0
-    func formatTruncateZeroPointDouble(number: Double) -> String {
+    func formatTruncateZeroPointDouble(for number: Double) -> String {
         if number.rounded(.down) == number {
             return "\(Int(number))"
         } else {

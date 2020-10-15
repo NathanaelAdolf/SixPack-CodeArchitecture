@@ -120,7 +120,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.5725490196078431" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="gw8-8L-cZz" firstAttribute="centerY" secondItem="tYd-2K-glV" secondAttribute="centerY" id="BHG-cs-53n"/>

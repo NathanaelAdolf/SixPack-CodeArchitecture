@@ -9,12 +9,16 @@
 import UIKit
 
 class BowlViewController: UIViewController {
-    var bowl: Bowl = Bowl.dataMock
     
     
     @IBOutlet weak var bowlView : BowlView!
-    var bowlIngredients: [IngredientType] = IngredientType.allCases
     
+    var bowl: Bowl = Bowl.dataMock {
+        didSet{
+            bowlView.setView(with: customer, bowl: bowl)
+        }
+    }
+    var bowlIngredients: [IngredientType] = IngredientType.allCases
     var customer: Customer = Customer()
     
     override func viewDidLoad() {
@@ -27,15 +31,7 @@ class BowlViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        bowlView.refreshView(with: customer, bowl: bowl)
-    }
-    
-    // Unwind function to this controller
-    @IBAction func unwindToBowlPage(_ sender: UIStoryboardSegue) {
-        if let _ = sender.source as? IngridientSelectionViewController {
-            bowlView.refreshView(with: customer, bowl: bowl)
-        }
-        
+        bowlView.setView(with: customer, bowl: bowl)
     }
     
     

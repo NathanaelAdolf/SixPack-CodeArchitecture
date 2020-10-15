@@ -62,7 +62,7 @@ extension CheckoutViewController {
             cell.checkoutItemDescriptionLabel.text = bowl.reduceIngridientStringFor(type: ingredientType)
             
             let sumTotal = bowl.sumTotalIngredients(type: ingredientType)
-            cell.quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(number: sumTotal)
+            cell.quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(for: sumTotal)
         }
         
         return cell

@@ -10,6 +10,8 @@ import UIKit
 
 class IngridientSelectionViewController: UIViewController {
     
+    @IBOutlet weak var ingredientsView: IngridientChoiceView!
+    
     var ingredientType: IngredientType = .base {
         didSet{
             switch ingredientType {
@@ -26,8 +28,6 @@ class IngridientSelectionViewController: UIViewController {
             }
         }
     }
-    
-    @IBOutlet weak var ingredientsView: IngridientChoiceView!
     
     var bowl: Bowl = Bowl()
     private var selectedIngredients: [String:Double] = [:]
@@ -47,13 +47,6 @@ class IngridientSelectionViewController: UIViewController {
         (isChargedForAdditionalServing, additionalCharge) = bowl.isChargedForAdditionalServing(type: ingredientType)
     }
     
-    
-    // detect whether view contoller will disappear
-    override func viewWillDisappear(_ animated: Bool) {
-        if let _ = self.navigationController?.topViewController as? BowlViewController {
-            performSegue(withIdentifier: "unwindToBowlPage", sender: self)
-        }
-    }
 }
 
 // MARK:- Table View Cell Base Protocol
