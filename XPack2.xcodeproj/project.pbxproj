@@ -37,9 +37,6 @@
 		F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */; };
 		F432E631211E81E100C6C663 /* PaymentMethod.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F432E62F211E81E100C6C663 /* PaymentMethod.storyboard */; };
 		F432E633211E81F300C6C663 /* PaymentDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F432E632211E81F300C6C663 /* PaymentDetail.storyboard */; };
-		F4892FA0211EE22F00D5B92E /* SFCompactText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4892F9D211EE22F00D5B92E /* SFCompactText-Medium.otf */; };
-		F4892FA1211EE22F00D5B92E /* SFCompactText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4892F9E211EE22F00D5B92E /* SFCompactText-Regular.otf */; };
-		F4892FA2211EE22F00D5B92E /* SFCompactText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */; };
 		F4BC77FB2119306200F1C758 /* XPack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4BC77F92119306200F1C758 /* XPack.xcdatamodeld */; };
 		F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */; };
 		F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */; };
@@ -89,9 +86,6 @@
 		F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 		F432E630211E81E100C6C663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/Pages/checkout/XPack2/Pages/Bowl/XPack2/View/Base.lproj/PaymentMethod.storyboard; sourceTree = "<group>"; };
 		F432E632211E81F300C6C663 /* PaymentDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentDetail.storyboard; sourceTree = "<group>"; };
-		F4892F9D211EE22F00D5B92E /* SFCompactText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Medium.otf"; sourceTree = "<group>"; };
-		F4892F9E211EE22F00D5B92E /* SFCompactText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Regular.otf"; sourceTree = "<group>"; };
-		F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Bold.otf"; sourceTree = "<group>"; };
 		F4BC77FA2119306200F1C758 /* XPack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XPack.xcdatamodel; sourceTree = "<group>"; };
 		F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientSelectionViewController.swift; sourceTree = "<group>"; };
 		F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
@@ -266,9 +260,6 @@
 		F468E290211E863000C859DC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */,
-				F4892F9D211EE22F00D5B92E /* SFCompactText-Medium.otf */,
-				F4892F9E211EE22F00D5B92E /* SFCompactText-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -409,17 +400,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4892FA2211EE22F00D5B92E /* SFCompactText-Bold.otf in Resources */,
 				F432E633211E81F300C6C663 /* PaymentDetail.storyboard in Resources */,
 				F40742102117E23D00F6CD12 /* LaunchScreen.storyboard in Resources */,
 				F4F2FB59211BE45B003898E6 /* CheckoutPage.storyboard in Resources */,
 				F432E631211E81E100C6C663 /* PaymentMethod.storyboard in Resources */,
 				7DB29A6C2123C5BD00C4538B /* HistoryDetail.storyboard in Resources */,
-				F4892FA1211EE22F00D5B92E /* SFCompactText-Regular.otf in Resources */,
 				F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */,
 				7D02B807252C40B900A09235 /* .gitignore in Resources */,
 				F4F4303C2119B80000B2B859 /* ChooseMenu.storyboard in Resources */,
-				F4892FA0211EE22F00D5B92E /* SFCompactText-Medium.otf in Resources */,
 				F4FE7970211A8D8B0068674F /* IngridientChoice.storyboard in Resources */,
 				F407420B2117E23C00F6CD12 /* Main.storyboard in Resources */,
 			);
