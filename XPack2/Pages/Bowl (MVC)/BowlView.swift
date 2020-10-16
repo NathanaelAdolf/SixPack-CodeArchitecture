@@ -21,7 +21,8 @@ class BowlView: UIView {
     @IBOutlet weak var buildInfoLabel: UILabel!
     @IBOutlet weak var bowlTypeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-
+    @IBOutlet weak var totalLabel: UILabel!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,6 +42,7 @@ class BowlView: UIView {
         buildInfoLabel?.text = "You have \(bowlTypeDescription) bowl. \(bowlTypeInfo)"
         bowlContentTableView?.reloadData()
         priceLabel?.text = "\(bowl.price)K"
+        applyAccessibility()
     }
     
 
@@ -52,4 +54,21 @@ class BowlView: UIView {
     }
     
     
+}
+
+//MARK: Accessibility
+extension BowlView {
+    func applyAccessibility() {
+        bowlTypeLabel.font = .preferredFont(forTextStyle: .body)
+        bowlTypeLabel.adjustsFontForContentSizeCategory = true
+        
+        buildInfoLabel.font = .preferredFont(forTextStyle: .body)
+        buildInfoLabel.adjustsFontForContentSizeCategory = true
+        
+        totalLabel.font = .preferredFont(forTextStyle: .body)
+        totalLabel.adjustsFontForContentSizeCategory = true
+        
+        priceLabel.font = .preferredFont(forTextStyle: .body)
+        priceLabel.adjustsFontForContentSizeCategory = true
+    }
 }
