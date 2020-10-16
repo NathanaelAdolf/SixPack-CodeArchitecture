@@ -22,7 +22,7 @@ class BowlView: UIView {
     @IBOutlet weak var bowlTypeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    
+    @IBOutlet weak var totalView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,5 +70,7 @@ extension BowlView {
         
         priceLabel.font = .preferredFont(forTextStyle: .body)
         priceLabel.adjustsFontForContentSizeCategory = true
+        
+        totalView.accessibilityLabel = "\(totalLabel.text! + priceLabel.text!). Double-tap to see the summary payment."
     }
 }

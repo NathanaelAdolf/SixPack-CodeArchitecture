@@ -121,6 +121,9 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="gw8-8L-cZz" firstAttribute="centerY" secondItem="tYd-2K-glV" secondAttribute="centerY" id="BHG-cs-53n"/>
@@ -154,6 +157,7 @@
                             <outlet property="buildInfoLabel" destination="Ndu-1j-QH4" id="DUm-Wr-7I7"/>
                             <outlet property="priceLabel" destination="gw8-8L-cZz" id="5Vi-56-6Bk"/>
                             <outlet property="totalLabel" destination="Bjq-IT-Yw2" id="ALD-DR-TB7"/>
+                            <outlet property="totalView" destination="tYd-2K-glV" id="eRi-Jf-73A"/>
                         </connections>
                     </view>
                     <toolbarItems/>
