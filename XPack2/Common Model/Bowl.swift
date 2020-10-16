@@ -41,6 +41,7 @@ public class Bowl: NSObject,NSCoding{
         self.ingredients = tempResult
         
     }
+    
 }
 
 

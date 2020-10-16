@@ -58,14 +58,16 @@ class IngridientTableViewCell: UITableViewCell {
         
     }
     
-    func cellConfig(withIngredients: [String], currentIndex: Int, type: IngredientType, chargeAmount: Int, isCharge: Bool, selectedIng: [String:Double]) {
+    func cellConfig(withIngredients: [String], imageDescription : [String], currentIndex: Int, type: IngredientType, chargeAmount: Int, isCharge: Bool, selectedIng: [String:Double]) {
         let ingredientName = withIngredients[currentIndex]
+        let imageDescription = imageDescription[currentIndex]
+        
         
         if let image = UIImage(named: ingredientName){
             ingredientImageView.image = image
             
             // 3. Accessibility
-            ingredientImageView.accessibilityLabel = ingredientName
+            ingredientImageView.accessibilityLabel = imageDescription
         }
         
         if let additionalPrice = IngredientData().additionalPrice[ingredientName] {
