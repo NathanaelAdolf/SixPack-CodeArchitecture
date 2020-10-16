@@ -36,5 +36,6 @@ extension BowlDetailTableViewCell {
         
         quantityLabel.font = .preferredFont(forTextStyle: .body)
         quantityLabel.adjustsFontForContentSizeCategory = true
+        quantityLabel.accessibilityLabel = "\(quantityLabel.text!) item"
     }
 }
