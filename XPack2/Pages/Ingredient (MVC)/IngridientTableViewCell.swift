@@ -22,6 +22,27 @@ class IngridientTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         ingridientStepper.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        
+        setupAccessibility()
+    }
+    
+    func setupAccessibility () {
+        // 1. Accessibility
+        self.accessibilityElements = [self.ingredientImageView, self.ingridientNameLabel, self.priceLabel, self.ingridientQuantityLabel, self.ingridientStepper]
+        
+        // 2. Accessibility
+        self.ingredientImageView.isAccessibilityElement = true
+        self.ingredientImageView.accessibilityTraits = .image
+//        ingredientImageView.accessibilityLabel = "Label Description"
+        
+        self.ingridientNameLabel.font = .preferredFont(forTextStyle: .body)
+        self.ingridientNameLabel.adjustsFontForContentSizeCategory = true
+        
+        self.priceLabel.font = .preferredFont(forTextStyle: .body)
+        self.priceLabel.adjustsFontForContentSizeCategory = true
+        
+        self.ingridientQuantityLabel.font = .preferredFont(forTextStyle: .body)
+        self.ingridientQuantityLabel.adjustsFontForContentSizeCategory = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,6 +63,9 @@ class IngridientTableViewCell: UITableViewCell {
         
         if let image = UIImage(named: ingredientName){
             ingredientImageView.image = image
+            
+            // 3. Accessibility
+            ingredientImageView.accessibilityLabel = ingredientName
         }
         
         if let additionalPrice = IngredientData().additionalPrice[ingredientName] {
