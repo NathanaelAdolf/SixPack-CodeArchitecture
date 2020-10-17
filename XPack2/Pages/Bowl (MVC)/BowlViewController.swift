@@ -48,6 +48,7 @@ class BowlViewController: UIViewController {
         if let dest = segue.destination as? IngridientSelectionViewController {
             let ip = sender as! IndexPath
             dest.ingredientType = bowlIngredients[ip.row]
+            dest.ingredientTypeDesc = bowlIngredients[ip.row]
             dest.bowl = bowl
         }
         
