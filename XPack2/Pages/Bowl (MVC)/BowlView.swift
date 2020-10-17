@@ -21,7 +21,6 @@ class BowlView: UIView {
     @IBOutlet weak var buildInfoLabel: UILabel!
     @IBOutlet weak var bowlTypeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)

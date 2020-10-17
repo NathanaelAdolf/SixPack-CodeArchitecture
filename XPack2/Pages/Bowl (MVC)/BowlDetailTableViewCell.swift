@@ -20,8 +20,22 @@ class BowlDetailTableViewCell: UITableViewCell {
             subtitleLabel.text = bowl.reduceIngridientStringFor(type: ingredientType)
             quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(number: bowl.sumTotalIngredients(type: ingredientType))
         }
+        applyAccessibility()
     }
-
-    
-
 }
+
+//MARK: Accessibiity
+extension BowlDetailTableViewCell {
+    func applyAccessibility() {
+        titleLabel.font = .preferredFont(forTextStyle: .body)
+        titleLabel.adjustsFontForContentSizeCategory = true
+        
+        subtitleLabel.font = .preferredFont(forTextStyle: .body)
+        subtitleLabel.adjustsFontForContentSizeCategory = true
+        
+        quantityLabel.font = .preferredFont(forTextStyle: .body)
+        quantityLabel.adjustsFontForContentSizeCategory = true
+        quantityLabel.accessibilityLabel = "\(quantityLabel.text!) detail item in this menu"
+    }
+}
+
