@@ -45,6 +45,8 @@ class IngridientSelectionViewController: UIViewController {
         ingredientsView.updatePriceBarItem(price: bowl.price)
         
         (isChargedForAdditionalServing, additionalCharge) = bowl.isChargedForAdditionalServing(type: ingredientType)
+        
+        self.applyAccessibility()
     }
     
 }
@@ -102,5 +104,13 @@ extension IngridientSelectionViewController{
             }
         }
         return "\(Int(value))"
+    }
+}
+
+extension IngridientSelectionViewController {
+    func applyAccessibility() {
+        ingredientsView.totalPriceView.isAccessibilityElement = true
+        ingredientsView.totalPriceView.accessibilityTraits = UIAccessibilityTraits.staticText
+        ingredientsView.totalPriceView.accessibilityLabel = "Total is \(ingredientsView.priceLabel.text ?? "0") K"
     }
 }
