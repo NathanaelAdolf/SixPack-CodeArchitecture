@@ -19,6 +19,11 @@ class IngredientData {
         ["Barbeque", "Green Curry", "Mint Yogurt", "Miso Mustard", "Pesto Vinaigrette", "Romesco", "Sesame Peanut", "Thai"]
     ]
     
+    let imageDescription = [
+        "Brown Rice" : "nutty flavor and a medium to firm, chewy texture",
+        "Romaine Lettuce": "crisp, succulent, and crunchy with a mild, slightly bitter taste"
+    ]
+    
     let additionalPrice: [String:Int] = ["Baby Spinach": 10, "Quinoa": 10, "Rib Eye Steak": 10, "Salmon": 20, "Avocado": 10]
     
     let additionalServing: [IngredientType:Int] = [.base: 10, .supplement: 10, .topping: 5, .dressing: 5]

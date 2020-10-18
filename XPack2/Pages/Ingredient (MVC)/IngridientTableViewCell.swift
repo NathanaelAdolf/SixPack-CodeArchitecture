@@ -15,18 +15,19 @@ class IngridientTableViewCell: UITableViewCell {
     @IBOutlet weak var ingridientNameLabel: UILabel!
     @IBOutlet weak var ingredientImageView: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
-        
+    
     weak var cellProtocol: IngridientCellProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         ingridientStepper.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        self.applyAccessibility()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -42,6 +43,7 @@ class IngridientTableViewCell: UITableViewCell {
         
         if let image = UIImage(named: ingredientName){
             ingredientImageView.image = image
+            ingredientImageView.accessibilityLabel = IngredientData().imageDescription[ingredientName] ?? ingredientName
         }
         
         if let additionalPrice = IngredientData().additionalPrice[ingredientName] {
@@ -81,9 +83,30 @@ class IngridientTableViewCell: UITableViewCell {
         }
         return "\(Int(stepperValue))"
     }
-        
+    
 }
 
 protocol IngridientCellProtocol: class {
     func setQuantityLabel(ingridientName: String, stepper: UIStepper) -> String
+}
+
+// MARK:- Accessibility
+extension IngridientTableViewCell {
+    func applyAccessibility() {
+        // 1. Accessibility
+        self.accessibilityElements = [self.ingredientImageView, self.ingridientNameLabel, self.priceLabel, self.ingridientQuantityLabel, self.ingridientStepper]
+        
+        // 2. Accessibility
+        self.ingredientImageView.isAccessibilityElement = true
+        self.ingredientImageView.accessibilityTraits = .image
+        
+        self.ingridientNameLabel.font = .preferredFont(forTextStyle: .body)
+        self.ingridientNameLabel.adjustsFontForContentSizeCategory = true
+        
+        self.priceLabel.font = .preferredFont(forTextStyle: .body)
+        self.priceLabel.adjustsFontForContentSizeCategory = true
+        
+        self.ingridientQuantityLabel.font = .preferredFont(forTextStyle: .body)
+        self.ingridientQuantityLabel.adjustsFontForContentSizeCategory = true
+    }
 }
