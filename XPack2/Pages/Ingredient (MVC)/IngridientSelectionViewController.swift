@@ -14,35 +14,19 @@ class IngridientSelectionViewController: UIViewController {
         didSet{
             switch ingredientType {
             case .base:
-                ingredients = IngredientData().bases[0]
+                ingredients = IngredientData().bases
             case .protein:
-                ingredients = IngredientData().proteins[0]
+                ingredients = IngredientData().proteins
             case .supplement:
-                ingredients = IngredientData().supplemets[0]
+                ingredients = IngredientData().supplemets
             case .topping:
-                ingredients = IngredientData().toppings[0]
+                ingredients = IngredientData().toppings
             case .dressing:
-                ingredients = IngredientData().dressings[0]
+                ingredients = IngredientData().dressings
             }
         }
     }
-    
-    var ingredientDesc: IngredientType = .base {
-        didSet{
-            switch ingredientDesc {
-            case .base:
-                ingredientsDesc = IngredientData().bases[1]
-            case .protein:
-                ingredientsDesc = IngredientData().proteins[1]
-            case .supplement:
-                ingredientsDesc = IngredientData().supplemets[1]
-            case .topping:
-                ingredientsDesc = IngredientData().toppings[1]
-            case .dressing:
-                ingredientsDesc = IngredientData().dressings[1]
-            }
-        }
-    }
+
     
     
     
@@ -51,7 +35,6 @@ class IngridientSelectionViewController: UIViewController {
     var bowl: Bowl = Bowl()
     private var selectedIngredients: [String:Double] = [:]
     private var ingredients: [String] = []
-    private var ingredientsDesc: [String] = []
     private var isChargedForAdditionalServing = false
     private var additionalCharge = 0
     
@@ -84,7 +67,7 @@ extension IngridientSelectionViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IngridientCell", for: indexPath) as! IngridientTableViewCell
-        cell.cellConfig(withIngredients: ingredients, imageDescription: ingredientsDesc,
+        cell.cellConfig(withIngredients: ingredients,
                         currentIndex: indexPath.row,
                         type: ingredientType,
                         chargeAmount: self.additionalCharge,
