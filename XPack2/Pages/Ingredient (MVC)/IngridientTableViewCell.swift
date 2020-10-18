@@ -37,7 +37,8 @@ class IngridientTableViewCell: UITableViewCell {
         
     }
     
-    func cellConfig(withIngredients: [String], currentIndex: Int, type: IngredientType, chargeAmount: Int, isCharge: Bool, selectedIng: [String:Double]) {
+    func cellConfig(withIngredients: [String], imageDescription: [String], currentIndex: Int, type: IngredientType, chargeAmount: Int, isCharge: Bool, selectedIng: [String:Double]) {
+        applyAccessibility(imageDescription: imageDescription[currentIndex])
         let ingredientName = withIngredients[currentIndex]
         
         if let image = UIImage(named: ingredientName){
@@ -86,4 +87,21 @@ class IngridientTableViewCell: UITableViewCell {
 
 protocol IngridientCellProtocol: class {
     func setQuantityLabel(ingridientName: String, stepper: UIStepper) -> String
+}
+
+//MARK: Accessibility
+extension IngridientTableViewCell {
+    func applyAccessibility(imageDescription : String) {
+        ingridientNameLabel.font = .preferredFont(forTextStyle: .body)
+        ingridientNameLabel.adjustsFontForContentSizeCategory = true
+        
+        ingridientQuantityLabel.font = .preferredFont(forTextStyle: .body)
+        ingridientQuantityLabel.adjustsFontForContentSizeCategory = true
+        
+        priceLabel.font = .preferredFont(forTextStyle: .body)
+        priceLabel.adjustsFontForContentSizeCategory = true
+        
+        ingredientImageView.isAccessibilityElement = true
+        ingredientImageView.accessibilityLabel = imageDescription
+    }
 }
