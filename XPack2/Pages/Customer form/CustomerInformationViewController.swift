@@ -14,10 +14,41 @@ class CustomerInformationViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     
+    @IBOutlet weak var orderButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.setupXPackNavigationBarFor(title: "Order")
+        
+        //accessibility warning dynamic text handling
+        nameTextField.font = .preferredFont(forTextStyle: .body)
+        nameTextField.adjustsFontForContentSizeCategory = true
+        
+        emailTextField.font = .preferredFont(forTextStyle: .body)
+        emailTextField.adjustsFontForContentSizeCategory = true
+        
+        orderButton.titleLabel?.font = .preferredFont(forTextStyle: .title1)
+        orderButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        
+        //accessibility hit area is to small
+        emailTextField.accessibilityFrame.size.height = 45
+        
+        //handling contrast ratio
+        let titleContrastColor = UIColor.init(red: 69/255, green: 69/255, blue: 69/255, alpha: 1.0)
+        
+        //get navigation bar instance
+        let navBar = self.navigationController?.navigationBar
+        
+        //set the attribute
+        navBar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleContrastColor]
+        
+        //handling to potential inaccessible
+        nameTextField.isAccessibilityElement = true
+        nameTextField.accessibilityLabel = "Input Name"
+        
+        emailTextField.isAccessibilityElement = true
+        emailTextField.accessibilityLabel = "Input email"
         
     }
 
