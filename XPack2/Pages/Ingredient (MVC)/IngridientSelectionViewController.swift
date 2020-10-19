@@ -29,7 +29,7 @@ class IngridientSelectionViewController: UIViewController {
         }
     }
     
-    var bowl: Bowl = Bowl()
+    var bowl: Bowl = Bowl.dataMock
     private var selectedIngredients: [String:Double] = [:]
     private var ingredients: [String] = []
     private var isChargedForAdditionalServing = false
@@ -37,6 +37,9 @@ class IngridientSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //for testing with mock data
+       // ingredientType = .dressing
         
         if bowl.ingredients[ingredientType] != nil {
             selectedIngredients = bowl.ingredients[ingredientType]!
