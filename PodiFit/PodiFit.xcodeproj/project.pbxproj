@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48E8EFAB2542754400783427 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8EFAA2542754400783427 /* ExerciseViewController.swift */; };
+		48E8EFCF254277D800783427 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8EFCE254277D800783427 /* ExerciseView.swift */; };
+		8D09966F2542E977000363BE /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09966E2542E977000363BE /* ReminderTableViewCell.swift */; };
+		8D0996712542EA80000363BE /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0996702542EA80000363BE /* ReminderModel.swift */; };
+		8D13C0B625402997002195C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13C0B525402997002195C9 /* AppDelegate.swift */; };
+		8D13C0B825402997002195C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13C0B725402997002195C9 /* SceneDelegate.swift */; };
+		8D13C0BA25402997002195C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13C0B925402997002195C9 /* ViewController.swift */; };
+		8D13C0BD25402997002195C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0BB25402997002195C9 /* Main.storyboard */; };
+		8D13C0C025402997002195C9 /* PodiFit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D13C0BE25402997002195C9 /* PodiFit.xcdatamodeld */; };
+		8D13C0C225402998002195C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0C125402998002195C9 /* Assets.xcassets */; };
+		8D13C0C525402998002195C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0C325402998002195C9 /* LaunchScreen.storyboard */; };
+		8D13C0D025402999002195C9 /* PodiFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13C0CF25402999002195C9 /* PodiFitTests.swift */; };
+		8D13C0DB25402999002195C9 /* PodiFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13C0DA25402999002195C9 /* PodiFitUITests.swift */; };
+		8D13C0EB25402AC4002195C9 /* Assesment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0EA25402AC4002195C9 /* Assesment.storyboard */; };
+		8D13C0ED25402AD9002195C9 /* Assesment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13C0EC25402AD9002195C9 /* Assesment.swift */; };
+		8D13C0F025402B7E002195C9 /* ChoosePlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0EF25402B7E002195C9 /* ChoosePlan.storyboard */; };
+		8D13C0F325402C27002195C9 /* HomePlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0F225402C27002195C9 /* HomePlan.storyboard */; };
+		8D13C0F725402D84002195C9 /* Exercise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0F625402D84002195C9 /* Exercise.storyboard */; };
+		8D13C0FA25402E81002195C9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0F925402E81002195C9 /* Profile.storyboard */; };
+		8D13C0FF25402F2B002195C9 /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13C0FE25402F2B002195C9 /* Survey.storyboard */; };
+		8D148C8D254140CF00571419 /* HomeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D148C8C254140CF00571419 /* HomeProfileViewController.swift */; };
+		8D3D1E71254550D10070444C /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D1E70254550D10070444C /* AddReminderViewController.swift */; };
+		8D3D1E77254556A10070444C /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D1E76254556A10070444C /* NotificationHelper.swift */; };
+		8D73E2BA2547DDD2006338FF /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D73E2B92547DDD2006338FF /* EditProfileViewController.swift */; };
+		8D8E6272254683BD005F445D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E6271254683BD005F445D /* DateExtension.swift */; };
+		8DB64609254BA6F40072AC5C /* CompletedPlanDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB64608254BA6F40072AC5C /* CompletedPlanDetailsViewController.swift */; };
+		8DB6461C254BAA6C0072AC5C /* CompletedPlanDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6461B254BAA6C0072AC5C /* CompletedPlanDetailTableViewCell.swift */; };
+		8DB64621254BABF80072AC5C /* CompletedPlanDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB64620254BABF80072AC5C /* CompletedPlanDetailModel.swift */; };
+		8DC063ED2542699B00D7F8AD /* CompletedPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC063EC2542699B00D7F8AD /* CompletedPlanTableViewCell.swift */; };
+		8DC063EF25426CAC00D7F8AD /* CompletedPlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC063EE25426CAC00D7F8AD /* CompletedPlanCollectionViewCell.swift */; };
+		8DC063F12542711900D7F8AD /* CompletedPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC063F02542711900D7F8AD /* CompletedPlanModel.swift */; };
+		8DC063F32542866800D7F8AD /* imagePersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC063F22542866800D7F8AD /* imagePersonTableViewCell.swift */; };
+		8DC063F5254286A200D7F8AD /* userDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC063F4254286A200D7F8AD /* userDataTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D13C0CC25402999002195C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D13C0AA25402997002195C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D13C0B125402997002195C9;
+			remoteInfo = PodiFit;
+		};
+		8D13C0D725402999002195C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D13C0AA25402997002195C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D13C0B125402997002195C9;
+			remoteInfo = PodiFit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48E8EFAA2542754400783427 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		48E8EFCE254277D800783427 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		8D09966E2542E977000363BE /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		8D0996702542EA80000363BE /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
+		8D13C0B225402997002195C9 /* PodiFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodiFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D13C0B525402997002195C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D13C0B725402997002195C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8D13C0B925402997002195C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D13C0BC25402997002195C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D13C0BF25402997002195C9 /* PodiFit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PodiFit.xcdatamodel; sourceTree = "<group>"; };
+		8D13C0C125402998002195C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D13C0C425402998002195C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D13C0C625402998002195C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D13C0CB25402999002195C9 /* PodiFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodiFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D13C0CF25402999002195C9 /* PodiFitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodiFitTests.swift; sourceTree = "<group>"; };
+		8D13C0D125402999002195C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D13C0D625402999002195C9 /* PodiFitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodiFitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D13C0DA25402999002195C9 /* PodiFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodiFitUITests.swift; sourceTree = "<group>"; };
+		8D13C0DC25402999002195C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D13C0EA25402AC4002195C9 /* Assesment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Assesment.storyboard; sourceTree = "<group>"; };
+		8D13C0EC25402AD9002195C9 /* Assesment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assesment.swift; sourceTree = "<group>"; };
+		8D13C0EF25402B7E002195C9 /* ChoosePlan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosePlan.storyboard; sourceTree = "<group>"; };
+		8D13C0F225402C27002195C9 /* HomePlan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePlan.storyboard; sourceTree = "<group>"; };
+		8D13C0F625402D84002195C9 /* Exercise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exercise.storyboard; sourceTree = "<group>"; };
+		8D13C0F925402E81002195C9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		8D13C0FE25402F2B002195C9 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
+		8D148C8C254140CF00571419 /* HomeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileViewController.swift; sourceTree = "<group>"; };
+		8D3D1E70254550D10070444C /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
+		8D3D1E76254556A10070444C /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		8D73E2B92547DDD2006338FF /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		8D8E6271254683BD005F445D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		8DB64608254BA6F40072AC5C /* CompletedPlanDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPlanDetailsViewController.swift; sourceTree = "<group>"; };
+		8DB6461B254BAA6C0072AC5C /* CompletedPlanDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPlanDetailTableViewCell.swift; sourceTree = "<group>"; };
+		8DB64620254BABF80072AC5C /* CompletedPlanDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPlanDetailModel.swift; sourceTree = "<group>"; };
+		8DC063EC2542699B00D7F8AD /* CompletedPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPlanTableViewCell.swift; sourceTree = "<group>"; };
+		8DC063EE25426CAC00D7F8AD /* CompletedPlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPlanCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DC063F02542711900D7F8AD /* CompletedPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPlanModel.swift; sourceTree = "<group>"; };
+		8DC063F22542866800D7F8AD /* imagePersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePersonTableViewCell.swift; sourceTree = "<group>"; };
+		8DC063F4254286A200D7F8AD /* userDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D13C0AF25402997002195C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D13C0C825402999002195C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D13C0D325402999002195C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4898B4C9254928E800FBBC17 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				4898B4CC2549295000FBBC17 /* Fonts */,
+				4898B4CB2549294900FBBC17 /* Colours */,
+				4898B4CA2549294400FBBC17 /* UI */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		4898B4CA2549294400FBBC17 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4898B4CB2549294900FBBC17 /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colours;
+			sourceTree = "<group>";
+		};
+		4898B4CC2549295000FBBC17 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		48E8EFD4254280E100783427 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48E8EFAA2542754400783427 /* ExerciseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48E8EFD5254280EB00783427 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0F625402D84002195C9 /* Exercise.storyboard */,
+				48E8EFCE254277D800783427 /* ExerciseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D13C0A925402997002195C9 = {
+			isa = PBXGroup;
+			children = (
+				8D13C0B425402997002195C9 /* PodiFit */,
+				8D13C0CE25402999002195C9 /* PodiFitTests */,
+				8D13C0D925402999002195C9 /* PodiFitUITests */,
+				8D13C0B325402997002195C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D13C0B325402997002195C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0B225402997002195C9 /* PodiFit.app */,
+				8D13C0CB25402999002195C9 /* PodiFitTests.xctest */,
+				8D13C0D625402999002195C9 /* PodiFitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D13C0B425402997002195C9 /* PodiFit */ = {
+			isa = PBXGroup;
+			children = (
+				4898B4C9254928E800FBBC17 /* Theme */,
+				8D13C101254035D8002195C9 /* Networking Model */,
+				8D13C0FB25402F02002195C9 /* Survey */,
+				8D13C0F825402E6E002195C9 /* HomeProfile */,
+				8D13C0F525402D6D002195C9 /* Exercise */,
+				8D13C0F125402BFE002195C9 /* HomePlan */,
+				8D13C0EE25402B57002195C9 /* ChoosePlan */,
+				8D13C0E925402AA4002195C9 /* Assesment */,
+				8D13C0B525402997002195C9 /* AppDelegate.swift */,
+				8D13C0B925402997002195C9 /* ViewController.swift */,
+				8D13C0BB25402997002195C9 /* Main.storyboard */,
+				8D13C0C125402998002195C9 /* Assets.xcassets */,
+				8D13C0C325402998002195C9 /* LaunchScreen.storyboard */,
+				8D13C0C625402998002195C9 /* Info.plist */,
+				8D13C0BE25402997002195C9 /* PodiFit.xcdatamodeld */,
+			);
+			path = PodiFit;
+			sourceTree = "<group>";
+		};
+		8D13C0CE25402999002195C9 /* PodiFitTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0CF25402999002195C9 /* PodiFitTests.swift */,
+				8D13C0D125402999002195C9 /* Info.plist */,
+			);
+			path = PodiFitTests;
+			sourceTree = "<group>";
+		};
+		8D13C0D925402999002195C9 /* PodiFitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0DA25402999002195C9 /* PodiFitUITests.swift */,
+				8D13C0DC25402999002195C9 /* Info.plist */,
+			);
+			path = PodiFitUITests;
+			sourceTree = "<group>";
+		};
+		8D13C0E925402AA4002195C9 /* Assesment */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0EC25402AD9002195C9 /* Assesment.swift */,
+				8D13C0EA25402AC4002195C9 /* Assesment.storyboard */,
+			);
+			path = Assesment;
+			sourceTree = "<group>";
+		};
+		8D13C0EE25402B57002195C9 /* ChoosePlan */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0B725402997002195C9 /* SceneDelegate.swift */,
+				8D13C0EF25402B7E002195C9 /* ChoosePlan.storyboard */,
+			);
+			path = ChoosePlan;
+			sourceTree = "<group>";
+		};
+		8D13C0F125402BFE002195C9 /* HomePlan */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0F225402C27002195C9 /* HomePlan.storyboard */,
+			);
+			path = HomePlan;
+			sourceTree = "<group>";
+		};
+		8D13C0F525402D6D002195C9 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				48E8EFD5254280EB00783427 /* View */,
+				48E8EFD4254280E100783427 /* Controller */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		8D13C0F825402E6E002195C9 /* HomeProfile */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0F925402E81002195C9 /* Profile.storyboard */,
+				8D73E2B92547DDD2006338FF /* EditProfileViewController.swift */,
+				8D148C8C254140CF00571419 /* HomeProfileViewController.swift */,
+				8D3D1E70254550D10070444C /* AddReminderViewController.swift */,
+				8DB64608254BA6F40072AC5C /* CompletedPlanDetailsViewController.swift */,
+				8D09966E2542E977000363BE /* ReminderTableViewCell.swift */,
+				8DC063F4254286A200D7F8AD /* userDataTableViewCell.swift */,
+				8DB6461B254BAA6C0072AC5C /* CompletedPlanDetailTableViewCell.swift */,
+				8DC063F22542866800D7F8AD /* imagePersonTableViewCell.swift */,
+				8DC063EE25426CAC00D7F8AD /* CompletedPlanCollectionViewCell.swift */,
+				8DC063EC2542699B00D7F8AD /* CompletedPlanTableViewCell.swift */,
+				8DB64620254BABF80072AC5C /* CompletedPlanDetailModel.swift */,
+				8DC063F02542711900D7F8AD /* CompletedPlanModel.swift */,
+				8D0996702542EA80000363BE /* ReminderModel.swift */,
+				8D8E6271254683BD005F445D /* DateExtension.swift */,
+			);
+			path = HomeProfile;
+			sourceTree = "<group>";
+		};
+		8D13C0FB25402F02002195C9 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				8D13C0FE25402F2B002195C9 /* Survey.storyboard */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		8D13C101254035D8002195C9 /* Networking Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D1E76254556A10070444C /* NotificationHelper.swift */,
+			);
+			path = "Networking Model";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D13C0B125402997002195C9 /* PodiFit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D13C0DF25402999002195C9 /* Build configuration list for PBXNativeTarget "PodiFit" */;
+			buildPhases = (
+				8D13C0AE25402997002195C9 /* Sources */,
+				8D13C0AF25402997002195C9 /* Frameworks */,
+				8D13C0B025402997002195C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PodiFit;
+			productName = PodiFit;
+			productReference = 8D13C0B225402997002195C9 /* PodiFit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D13C0CA25402999002195C9 /* PodiFitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D13C0E225402999002195C9 /* Build configuration list for PBXNativeTarget "PodiFitTests" */;
+			buildPhases = (
+				8D13C0C725402999002195C9 /* Sources */,
+				8D13C0C825402999002195C9 /* Frameworks */,
+				8D13C0C925402999002195C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D13C0CD25402999002195C9 /* PBXTargetDependency */,
+			);
+			name = PodiFitTests;
+			productName = PodiFitTests;
+			productReference = 8D13C0CB25402999002195C9 /* PodiFitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8D13C0D525402999002195C9 /* PodiFitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D13C0E525402999002195C9 /* Build configuration list for PBXNativeTarget "PodiFitUITests" */;
+			buildPhases = (
+				8D13C0D225402999002195C9 /* Sources */,
+				8D13C0D325402999002195C9 /* Frameworks */,
+				8D13C0D425402999002195C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D13C0D825402999002195C9 /* PBXTargetDependency */,
+			);
+			name = PodiFitUITests;
+			productName = PodiFitUITests;
+			productReference = 8D13C0D625402999002195C9 /* PodiFitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D13C0AA25402997002195C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Nathanael Adolf Sukiman";
+				TargetAttributes = {
+					8D13C0B125402997002195C9 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					8D13C0CA25402999002195C9 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 8D13C0B125402997002195C9;
+					};
+					8D13C0D525402999002195C9 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 8D13C0B125402997002195C9;
+					};
+				};
+			};
+			buildConfigurationList = 8D13C0AD25402997002195C9 /* Build configuration list for PBXProject "PodiFit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D13C0A925402997002195C9;
+			productRefGroup = 8D13C0B325402997002195C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D13C0B125402997002195C9 /* PodiFit */,
+				8D13C0CA25402999002195C9 /* PodiFitTests */,
+				8D13C0D525402999002195C9 /* PodiFitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D13C0B025402997002195C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D13C0F025402B7E002195C9 /* ChoosePlan.storyboard in Resources */,
+				8D13C0C525402998002195C9 /* LaunchScreen.storyboard in Resources */,
+				8D13C0FA25402E81002195C9 /* Profile.storyboard in Resources */,
+				8D13C0FF25402F2B002195C9 /* Survey.storyboard in Resources */,
+				8D13C0C225402998002195C9 /* Assets.xcassets in Resources */,
+				8D13C0F725402D84002195C9 /* Exercise.storyboard in Resources */,
+				8D13C0EB25402AC4002195C9 /* Assesment.storyboard in Resources */,
+				8D13C0F325402C27002195C9 /* HomePlan.storyboard in Resources */,
+				8D13C0BD25402997002195C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D13C0C925402999002195C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D13C0D425402999002195C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D13C0AE25402997002195C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D73E2BA2547DDD2006338FF /* EditProfileViewController.swift in Sources */,
+				8DC063F5254286A200D7F8AD /* userDataTableViewCell.swift in Sources */,
+				8D13C0ED25402AD9002195C9 /* Assesment.swift in Sources */,
+				8D148C8D254140CF00571419 /* HomeProfileViewController.swift in Sources */,
+				8D13C0BA25402997002195C9 /* ViewController.swift in Sources */,
+				8D13C0B625402997002195C9 /* AppDelegate.swift in Sources */,
+				8D13C0B825402997002195C9 /* SceneDelegate.swift in Sources */,
+				8DB6461C254BAA6C0072AC5C /* CompletedPlanDetailTableViewCell.swift in Sources */,
+				8D3D1E77254556A10070444C /* NotificationHelper.swift in Sources */,
+				8D0996712542EA80000363BE /* ReminderModel.swift in Sources */,
+				8DC063F12542711900D7F8AD /* CompletedPlanModel.swift in Sources */,
+				8D8E6272254683BD005F445D /* DateExtension.swift in Sources */,
+				8D09966F2542E977000363BE /* ReminderTableViewCell.swift in Sources */,
+				8DB64621254BABF80072AC5C /* CompletedPlanDetailModel.swift in Sources */,
+				48E8EFAB2542754400783427 /* ExerciseViewController.swift in Sources */,
+				8D13C0BA25402997002195C9 /* ViewController.swift in Sources */,
+				8D13C0B625402997002195C9 /* AppDelegate.swift in Sources */,
+				8DB64609254BA6F40072AC5C /* CompletedPlanDetailsViewController.swift in Sources */,
+				8D13C0B825402997002195C9 /* SceneDelegate.swift in Sources */,
+				48E8EFCF254277D800783427 /* ExerciseView.swift in Sources */,
+				8D13C0C025402997002195C9 /* PodiFit.xcdatamodeld in Sources */,
+				8DC063ED2542699B00D7F8AD /* CompletedPlanTableViewCell.swift in Sources */,
+				8DC063F32542866800D7F8AD /* imagePersonTableViewCell.swift in Sources */,
+				8D3D1E71254550D10070444C /* AddReminderViewController.swift in Sources */,
+				8DC063EF25426CAC00D7F8AD /* CompletedPlanCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D13C0C725402999002195C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D13C0D025402999002195C9 /* PodiFitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D13C0D225402999002195C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D13C0DB25402999002195C9 /* PodiFitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D13C0CD25402999002195C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D13C0B125402997002195C9 /* PodiFit */;
+			targetProxy = 8D13C0CC25402999002195C9 /* PBXContainerItemProxy */;
+		};
+		8D13C0D825402999002195C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D13C0B125402997002195C9 /* PodiFit */;
+			targetProxy = 8D13C0D725402999002195C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D13C0BB25402997002195C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D13C0BC25402997002195C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D13C0C325402998002195C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D13C0C425402998002195C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D13C0DD25402999002195C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D13C0DE25402999002195C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D13C0E025402999002195C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2LH5KBDDC;
+				INFOPLIST_FILE = PodiFit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloper.PodiFit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D13C0E125402999002195C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2LH5KBDDC;
+				INFOPLIST_FILE = PodiFit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloper.PodiFit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8D13C0E325402999002195C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2LH5KBDDC;
+				INFOPLIST_FILE = PodiFitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloper.PodiFitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PodiFit.app/PodiFit";
+			};
+			name = Debug;
+		};
+		8D13C0E425402999002195C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2LH5KBDDC;
+				INFOPLIST_FILE = PodiFitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloper.PodiFitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PodiFit.app/PodiFit";
+			};
+			name = Release;
+		};
+		8D13C0E625402999002195C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2LH5KBDDC;
+				INFOPLIST_FILE = PodiFitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloper.PodiFitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PodiFit;
+			};
+			name = Debug;
+		};
+		8D13C0E725402999002195C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2LH5KBDDC;
+				INFOPLIST_FILE = PodiFitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloper.PodiFitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PodiFit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D13C0AD25402997002195C9 /* Build configuration list for PBXProject "PodiFit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D13C0DD25402999002195C9 /* Debug */,
+				8D13C0DE25402999002195C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D13C0DF25402999002195C9 /* Build configuration list for PBXNativeTarget "PodiFit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D13C0E025402999002195C9 /* Debug */,
+				8D13C0E125402999002195C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D13C0E225402999002195C9 /* Build configuration list for PBXNativeTarget "PodiFitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D13C0E325402999002195C9 /* Debug */,
+				8D13C0E425402999002195C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D13C0E525402999002195C9 /* Build configuration list for PBXNativeTarget "PodiFitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D13C0E625402999002195C9 /* Debug */,
+				8D13C0E725402999002195C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8D13C0BE25402997002195C9 /* PodiFit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D13C0BF25402997002195C9 /* PodiFit.xcdatamodel */,
+			);
+			currentVersion = 8D13C0BF25402997002195C9 /* PodiFit.xcdatamodel */;
+			path = PodiFit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8D13C0AA25402997002195C9 /* Project object */;
+}
